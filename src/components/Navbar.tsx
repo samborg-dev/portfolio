@@ -48,14 +48,18 @@ const Navbar = () => {
                                     <div className={`${isActive ? "transform transition scale-110 font-bold" : ""} text-[#F5F1ED] text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl transform transition hover:scale-110`}>
                                         {item.name === 'LinkedIn' ? (
                                             <Link href={item.path} target="_blank" rel="noopener noreferrer">
-                                                <Image src="/logos/ln-White-72.png" alt="LinkedIn" width={30} height={30} className="inline-block align-middle" />
+                                                <Image src="/logos/Linked-White.png" alt="LinkedIn" width={30} height={30} className="inline-block align-middle" />
                                             </Link>
                                         ) : item.name === 'Github' ? (
                                             <Link href={item.path} target="_blank" rel="noopener noreferrer">
                                                 <Image src="logos/github-mark-white.svg" alt="Github" width={30} height={30} className="inline-block align-middle" />
                                             </Link>
                                         ) : (
-                                            <span className="text-[#F5F1ED] bg-transparent w-auto text-left">{item.name}</span>
+                                            <span className="text-[#F5F1ED] bg-transparent w-auto text-left">
+                                                <Link href={item.path}>
+                                                    {item.name}
+                                                </Link>
+                                            </span>
                                         )}
                                     </div>
                                 </li>
