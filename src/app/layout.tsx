@@ -31,8 +31,7 @@ export const metadata: Metadata = {
     openGraph: {
       type: "website",
       title: "Sam Borges",
-      description:
-      "Sam Borges is a undergraduate student at the University of Central Florida and an aspiring software engineer.",
+      description: "Sam Borges is a undergraduate student at the University of Central Florida and an aspiring software engineer.",
       },
 };
 
