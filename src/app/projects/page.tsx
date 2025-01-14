@@ -2,7 +2,7 @@ import Card from "@/components/Card";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Sam Borges | Skills",
+    title: "Sam Borges | Projects",
     description: "Sam Borges is a undergraduate student at the University of Central Florida and an aspiring software engineer.",
     keywords:[
         "Sam Borges",
@@ -64,12 +64,12 @@ const cards: card[] = [
 export default function Projects() {
     return (
 
-        <div className='flex flex-col min-h-screen items-center justify-center text-[#F5F1ED] bg-[#13293D]'>
+        <div className='flex flex-col min-h-screen items-center justify-center text-[#F5F1ED] bg-[#13293D] pt-40'>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold">
                 Projects
             </h1>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pt-16">
-                A collection of my work
+                A timeline of my work
             </h2>
             <div className='pt-16'>
                 <Card cards={cards} />
