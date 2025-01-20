@@ -27,7 +27,7 @@ type card = {
     subtitle: string;
     subsubtitle?: string;
     image: string;
-    body: string;
+    body: string[];
     skills?: string[];
     link?: string;
 };
@@ -38,7 +38,7 @@ const cards: card[] = [
         subtitle: 'Miami EdTech',
         subsubtitle: 'June 2023 - August 2023',
         image: '/logos/miamiedtech.png',
-        body: 'lalala',
+        body: ['• Assisted with the testing and development of visual recognition AI software in Python, increasing efficiency & accuracy by 25%. ', '• Researched the possible integrations & benefits of STEM education curriculum packages as part of a team of interns, suggesting a proposal to reach over 30 schools in the surrounding area.']
     },
 
     {
@@ -46,7 +46,7 @@ const cards: card[] = [
         subtitle: 'Miami Lakes Educational Center',
         subsubtitle: 'June 2022 – August 2022',
         image: '/logos/mlec.jpg',
-        body: 'lalala',
+        body: ['• Collaborated to create an AI-driven brainstorming platform that gathers data from top hackathon projects in order to generate winning ideas tailored to the user using TypeScript & Next.js.', '• Developed a sleek & intuitive front-end using Tailwind & React, prioritizing a clean & seamless user experience to boost engagement by 35%.'],
     },
 
     {
@@ -54,7 +54,7 @@ const cards: card[] = [
         subtitle: 'Miami Springs Middle School',
         subsubtitle: 'June 2019 - August 2023',
         image: '/logos/msms.webp',
-        body: 'lalala',
+        body: ['• Led & managed a team of 6 members, creating project timelines & assignments for each to increase productivity & efficiency by 45%.', '• Placed second in the Technology Student Association, Florida State Video Game Design Competition, 2024, besting over 35 other teams through the creation of enticing & innovative map, enemy, & battle design.'],
     },
 ];
 

@@ -18,7 +18,7 @@ type Cards = {
 export default function Card({ cards }: Cards) {
 
     return (
-        <div className="flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+        <div className="flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 pb-20">
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3 w-full'>
                 {
                     cards.map(item => {

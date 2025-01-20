@@ -36,7 +36,7 @@ const Navbar = () => {
     return (
         <div className='navbar flex justify-between py-6 px-4 items-center h-16 bg-transparent fixed top-0 left-0 w-full z-50'>
             <div className='block text-[#F5F1ED]'>
-                logo
+                
             </div>
             <div className='flex static w-auto h-auto bg-transparent'>
                 <ul className='flex flex-row static bg-transparent items-center p-0 h-full overflow-y-auto shadow-none'>

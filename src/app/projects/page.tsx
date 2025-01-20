@@ -35,7 +35,7 @@ const cards: card[] = [
     {
         title: 'Kmodo',
         subtitle: 'January 2025 - Present',
-        image: 'logos/github-mark.svg',
+        image: '/logos/kmodo.png',
         body: 'just wait for it',
         skills: ['#coming-soon'],
         link: 'https://www.kmodo.org/'

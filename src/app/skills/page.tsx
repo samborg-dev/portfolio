@@ -1,4 +1,4 @@
-import LongCard from "@/components/LongCard";
+import NoImageCard from "@/components/NoImageCard";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -26,9 +26,9 @@ type card = {
     title: string;
     subtitle?: string;
     subsubtitle?: string;
-    image?: string;
     body?: string;
     skills?: string[];
+    snames?: string[];
     link?: string;
 };
 
@@ -36,11 +36,19 @@ const cards: card[] = [
     {
         title: 'Languages',
         skills: ['logos/python-original.svg', 'logos/c-plain.svg', 'logos/csharp-plain.svg', 'logos/cplusplus-plain.svg', 'logos/java-original-wordmark.svg', 'logos/html5-plain.svg', 'logos/css3-plain-wordmark.svg', 'logos/javascript-original.svg', 'logos/typescript-original.svg'],
+        snames: ['Python', 'C', 'C#', 'C++', 'Java', 'HTML', 'CSS', 'JavaScript', 'TypeScript'],
     },
     
     {
         title: 'Libraries & Frameworks',
-        skills: ['logos/react-original.svg', 'logos/tailwindcss-original.svg', 'logos/nextjs-plain.svg', 'logos/node-js.svg', 'logos/trpc-original.svg', 'logos/pygame_logo.svg'],
+        skills: ['logos/react-original.svg', 'logos/tailwindcss-original.svg', 'logos/nextjs-plain.svg', 'logos/node-js.svg', 'logos/trpc-original.svg'],
+        snames: ['React', 'Tailwind CSS', 'Next.js', 'Node.js', 'tRPC'],
+    }, 
+
+    {
+        title: 'Developer Tools',
+        skills: ['logos/github-mark.svg', 'logos/git-plain.svg', 'logos/vscode-original.svg', 'logos/visualstudio-plain.svg', 'logos/pycharm-original.svg', 'logos/eclipse-original.svg', 'logos/unity-original.svg', 'logos/vercel.svg', 'logos/prisma-original.svg', '/logos/drizzle.png'],
+        snames: ['GitHub', 'Git', 'VS Code', 'Visual Studio', 'PyCharm', 'Eclipse', 'Unity', 'Vercel', 'Prisma', 'Drizzle'],
     }
 ];
 
@@ -52,10 +60,10 @@ export default function Skills() {
                 Skills
             </h1>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pt-16">
-                lalala
+                My repetoire of skills
             </h2>
             <div className='pt-16'>
-                <LongCard lcards={cards} />
+                <NoImageCard nicards={cards} />
             </div>
         </div>
 
