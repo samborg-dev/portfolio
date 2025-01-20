@@ -27,13 +27,11 @@ export default function LongCard({ lcards }: LongCards) {
                             <div key={item.title} className='menu-item w-auto text-[#F5F1ED] bg-[#1B4465] p-10 rounded-3xl transform transition sm:scale-90 hover:scale-100 border-solid border-[#F5F1ED] border-4 shadow-xl shadow-transparent hover:shadow-[#F5F1ED] mb-5'>
                                 <div className='flex flex-col'>
                                     <div className='flex flex-row items-center justify-left pb-5'>
-                                        <div className='absolute pr-5 '><Image src={item.image ?? '???'} alt={item.title ?? '???'} title={item.title} width={50} height={100} /></div>
+                                        <div className='absolute pr-5 '><Image src={item.image ?? 'logos/vercel.svg'} alt={item.title ?? 'logos/vercel.svg'} title={item.title} width={50} height={100} /></div>
                                         <div className='relative flex flex-col justify-left pl-20'>
-                                            <Link href={item.link ?? '/404'} target='_blank' rel="noopener noreferrer">
-                                                <div className='font-bold text-md sm:text-base md:text-lg lg:text-xl xl:text-2xl hover:underline transform transition hover:scale-110'>
-                                                    {item.title}
-                                                </div>
-                                            </Link>
+                                            <div className='font-bold text-md sm:text-base md:text-lg lg:text-xl xl:text-2xl'>
+                                                {item.title}
+                                            </div>
                                             <div className='font-semibold text-sm sm:text-xs md:text-base lg:text-base xl:text-lg'>
                                                 {item.subtitle}
                                             </div>
@@ -47,7 +45,9 @@ export default function LongCard({ lcards }: LongCards) {
 
                                     <div className='flex flex-wrap gap-2'>
                                         {item.skills?.map(skill => (
-                                            <span key={skill} className='bg-[#13293D] p-2 rounded-md'>{skill}</span>
+                                            <span key={skill} className='bg-[#13293D] p-2 rounded-md transform transition sm:scale-90 hover:scale-100 shadow-lg shadow-transparent hover:shadow-[#F5F1ED]'>
+                                                <Image src={skill ?? 'logos/vercel.svg'} alt={skill ?? 'logos/vercel.svg'} title={''} width={50} height={50} className='items-center ' />
+                                            </span>
                                         )) ?? '???'}
                                     </div>
 

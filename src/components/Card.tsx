@@ -43,7 +43,9 @@ export default function Card({ cards }: Cards) {
 
                                     <div className='flex flex-wrap gap-2'>
                                         {item.skills?.map(skill => (
-                                            <span key={skill} className='bg-[#13293D] p-2 rounded-md'>{skill}</span>
+                                            <span key={skill} className='bg-[#13293D] p-2 rounded-md transform transition sm:scale-90 hover:scale-100 shadow-lg shadow-transparent hover:shadow-[#F5F1ED]'>
+                                                {skill}
+                                            </span>
                                         )) ?? '???'}
                                     </div>
 
