@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Sam Borges | Projects",
+  title: "Sam Borges",
   description: "Sam Borges is a undergraduate student at the University of Central Florida and an aspiring software engineer.",
   keywords: [
     "Sam Borges",

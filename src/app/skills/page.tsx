@@ -2,7 +2,7 @@ import NoImageCard from "@/components/NoImageCard";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Sam Borges | Projects",
+    title: "Sam Borges | Skills",
     description: "Sam Borges is a undergraduate student at the University of Central Florida and an aspiring software engineer.",
     keywords:[
         "Sam Borges",
