@@ -60,7 +60,7 @@ export default function Skills() {
                 Skills
             </h1>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pt-16">
-                My repetoire of skills
+                My repertoire of skills
             </h2>
             <div className='pt-16'>
                 <NoImageCard nicards={cards} />
