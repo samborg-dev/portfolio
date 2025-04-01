@@ -35,10 +35,10 @@ const cards: card[] = [
     {
         title: 'Kmodo',
         subtitle: 'January 2025 - Present',
-        image: '/logos/kmodo.png',
-        body: 'just wait for it',
-        skills: ['#coming-soon'],
-        link: 'https://www.kmodo.org/'
+        image: '/logos/kmodo_logo.jpeg',
+        body: 'Hackathon & event management platform that allows users to create, manage, and participate in hackathons and events.',
+        skills: ['React', 'Tailwind CSS', 'Next.js', 'TypeScript', 'tRPC', 'Drizzle', 'PostgreSQL', 'Git'],
+        link: 'https://kmodo.org/'
     },
 
     {
@@ -46,8 +46,8 @@ const cards: card[] = [
         subtitle: 'KnightHacks VII 2024',
         image: '/logos/sparkahack.png',
         body: 'Website that generates user tailored hackathon project ideas based on the user’s intrests, skills, & choice of challenges using generative AI APIs.',
-        skills: ['React', 'Tailwind CSS', 'Next.js', 'TypeScript', 'tRPC', 'Gemini API',],
-        link: 'https://spark-a-hack-production.up.railway.app/'
+        skills: ['React', 'Tailwind CSS', 'Next.js', 'TypeScript', 'tRPC', 'Gemini API', 'Git'],
+        link: 'https://devpost.com/software/spark-a-hack'
     },
 
     {
@@ -69,7 +69,7 @@ export default function Projects() {
                 Projects
             </h1>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pt-16">
-                A timeline of my work
+                A collection of my work
             </h2>
             <div className='pt-16'>
                 <Card cards={cards} />

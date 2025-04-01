@@ -23,7 +23,7 @@ export default function LongCard({ lcards }: LongCards) {
                 {
                     lcards.map(item => {
                         return (
-                            <div key={item.title} className='menu-item w-auto text-[#F5F1ED] bg-[#1B4465] p-10 rounded-3xl transform transition sm:scale-90 hover:scale-100 border-solid border-[#F5F1ED] border-4 shadow-xl shadow-transparent hover:shadow-[#F5F1ED] mb-5'>
+                            <div key={item.subtitle} className='menu-item w-auto text-[#F5F1ED] bg-[#1B4465] p-10 rounded-3xl transform transition sm:scale-90 hover:scale-100 border-solid border-[#F5F1ED] border-4 shadow-xl shadow-transparent hover:shadow-[#F5F1ED] mb-5'>
                                 <div className='flex flex-col'>
                                     <div className='flex flex-row items-center justify-left pb-5'>
                                         <div className='absolute pr-5 '><Image src={item.image ?? 'logos/vercel.svg'} alt={item.title ?? 'logos/vercel.svg'} title={item.title} width={50} height={100} /></div>
