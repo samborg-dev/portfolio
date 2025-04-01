@@ -2,4 +2,136 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --background-light: #C1CEFE;
+    --background-dark: #3E5283;
+    --foreground: 224 71.4% 4.1%;
+    --foreground-light: #758ECD; 
+    --foreground-dark: #8EA6E3; 
+    --header: hsl();
+    --header-light: #cd7575;
+    --header-dark: 223, 47%, 63%;
+    --card: 227, 97%, 88%;
+    --card-light: 223, 47%, 63%;
+    --card-dark: 227, 97%, 88%;
+    --card-foreground: 0, 100%, 18%;
+    --card-foreground-light: 225, 64%, 85%;
+    --card-foreground-dark: 223, 47%, 63%;
 
+    --primary: 223, 47%, 63%;
+    --primary-light: 225, 60%, 75%;
+    --primary-dark: 223, 47%, 63%;
+
+
+    --primary-lighter: 262.1 83.3% 55%;
+    --primary-foreground: 0, 0%, 96%;
+    --secondary: 230, 100%, 72%;
+    --secondary-foreground: 230, 100%, 62%;
+    --accent: 229, 100%, 80%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --radius: 0.5rem;
+  }
+
+  [data-theme="light"] {
+    --background: var(--background-light);
+    --foreground: var(--foreground-light);
+    --card: var(--card-light);
+    --header: var(--header-light);
+    --primary: var(--primary-light);
+    --card-foreground: var(--card-foreground-light);
+  }
+
+  [data-theme="dark"] {
+    --background: var(--background-dark);
+    --foreground: var(--foreground-dark);
+    --card: var(--card-dark);
+    --header: var(--header-dark);
+    --primary: var(--primary-dark);
+    --card-foreground: var(--card-foreground-dark);
+  }
+
+  .theme-container {
+    background-color: var(--background);
+    color: var(--foreground); 
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@font-face {
+  font-family: 'Good Matcha';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Good Matcha'), url('/Good Matcha.otf') format('woff');
+}
+
+.top {
+  z-index: 2; 
+  position: relative; 
+}
+
+.supertop {
+  z-index: 3; 
+  position: relative; 
+}
+
+.left-flower {
+  position: fixed;
+  bottom: -20vh; 
+  left: -10vw; 
+  animation: rotateRight 5s linear infinite;
+  transform-origin: center; 
+  z-index: 1;
+}
+
+.right-flower {
+  position: fixed;
+  bottom: -20vh; 
+  right: -10vw; 
+  animation: rotateLeft 5s linear infinite;
+  transform-origin: center; 
+  z-index: 1;
+}
+.spinRight {
+  animation: rotateRight 5s linear infinite;
+  transform-origin: center; 
+  z-index: 1;
+}
+
+.spinLeft {
+  animation: rotateLeft 5s linear infinite;
+  transform-origin: center; 
+  z-index: 1;
+}
+
+@keyframes rotateRight {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateLeft {
+  0% {
+      transform: rotate(360deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}

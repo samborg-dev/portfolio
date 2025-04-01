@@ -1,18 +1,10 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { ThemeProvider, ThemeToggle } from "../components/ui/theme";
+import type { Metadata, Viewport } from "next";
+import { GeistSans } from "geist/font/sans"; 
+import { GeistMono } from "geist/font/mono";
+import Navbar from "../components/ui/navbar";
+//import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Sam Borges",
@@ -35,18 +27,28 @@ export const metadata: Metadata = {
       },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#C1CEFE" },
+    { media: "(prefers-color-scheme: dark)", color: "#624CAB" },
+  ],
+};
+
+export default function RootLayout(props: { children: React.ReactNode }) {
   return (
-    <html>
-      <body>
-        <Navbar />
-        <main className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          {children}
-        </main>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body suppressHydrationWarning className="theme-container">
+        <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem>
+          <Navbar />
+            <div>
+              {props.children}
+            </div>
+            <div className="top">
+              <div className="fixed bottom-10 justify-center items-center flex w-full">
+                <ThemeToggle />
+              </div>
+            </div>
+        </ThemeProvider>
       </body>
     </html>
   );
