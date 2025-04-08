@@ -42,7 +42,7 @@ export default function SamPage() {
       <div suppressHydrationWarning className="theme-container">
         <div className="min-h-screen flex flex-col justify-center items-center text-center pb-10 px-4 sm:px-14"> 
           <div className="w-full">
-            <Card className="max-w-xl mx-auto"> 
+            <Card className="max-w-xl mx-auto top"> 
               <CardHeader>
                 <CardTitle className="text-4xl sm:text-5xl font-bold pb-5" style={{ fontFamily: 'Good Matcha' }}>Sam Borges</CardTitle>
                 <CardDescription>

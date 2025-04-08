@@ -95,7 +95,7 @@
   left: -10vw; 
   animation: rotateRight 5s linear infinite;
   transform-origin: center; 
-  z-index: 1;
+  z-index: 0;
 }
 
 .right-flower {
@@ -104,18 +104,18 @@
   right: -10vw; 
   animation: rotateLeft 5s linear infinite;
   transform-origin: center; 
-  z-index: 1;
+  z-index: 0;
 }
 .spinRight {
   animation: rotateRight 5s linear infinite;
   transform-origin: center; 
-  z-index: 1;
+  z-index: 0;
 }
 
 .spinLeft {
   animation: rotateLeft 5s linear infinite;
   transform-origin: center; 
-  z-index: 1;
+  z-index: 0;
 }
 
 @keyframes rotateRight {
