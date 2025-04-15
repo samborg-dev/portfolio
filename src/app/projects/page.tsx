@@ -36,7 +36,7 @@ const cards: card[] = [
         title: 'Tariffix',
         subtitle: 'Bitcamp 2025',
         image: '/logos/tariffix-icon.svg',
-        body: 'Hackathon & event management platform that allows users to create, manage, and participate in hackathons and events.',
+        body: 'Chrome extension and educational website that helps users understand the impact of tariffs on product prices using AI-powered estimations and live product metadata analysis.',
         skills: ['React', 'Vite', 'Tailwind CSS', 'Next.js', 'TypeScript', 'MongoDB', 'Chrome Extension API', 'Gemini API', 'Cheerio', 'Git'],
         link: 'https://devpost.com/software/tariffix'
     },
