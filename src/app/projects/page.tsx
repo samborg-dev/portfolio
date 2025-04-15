@@ -33,6 +33,22 @@ type card = {
 
 const cards: card[] = [
     {
+        title: 'Tariffix',
+        subtitle: 'Bitcamp 2025',
+        image: '/logos/tariffix-icon.svg',
+        body: 'Hackathon & event management platform that allows users to create, manage, and participate in hackathons and events.',
+        skills: ['React', 'Vite', 'Tailwind CSS', 'Next.js', 'TypeScript', 'MongoDB', 'Chrome Extension API', 'Gemini API', 'Cheerio', 'Git'],
+        link: 'https://devpost.com/software/tariffix'
+    },
+    {
+        title: 'SightSync',
+        subtitle: 'HackUSF 2025',
+        image: '/logos/SightSync.jpg',
+        body: 'System-level accessibility tool that enables hands-free computer control using head movements and voice commands through real-time computer vision and speech recognition.',
+        skills: ['Python', 'Pygame', 'Pyautogui', 'OpenCV', 'MediaPipe', 'Git'],
+        link: 'https://devpost.com/software/sightsync-iztcrl'
+    },
+    {
         title: 'Kmodo',
         subtitle: 'January 2025 - Present',
         image: '/logos/kmodo_logo.jpeg',

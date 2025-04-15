@@ -35,20 +35,52 @@ type card = {
 const cards: card[] = [
     {
         title: 'Languages',
-        skills: ['logos/python-original.svg', 'logos/c-plain.svg', 'logos/csharp-plain.svg', 'logos/cplusplus-plain.svg', 'logos/java-original-wordmark.svg', 'logos/html5-plain.svg', 'logos/css3-plain-wordmark.svg', 'logos/javascript-original.svg', 'logos/typescript-original.svg'],
+
+        skills: [
+            'logos/python-original.svg', 'logos/c-plain.svg', 'logos/csharp-plain.svg', 
+            'logos/cplusplus-plain.svg', 'logos/java-original-wordmark.svg', 
+            'logos/html5-plain.svg', 'logos/css3-plain-wordmark.svg', 
+            'logos/javascript-original.svg', 'logos/typescript-original.svg',
+        ],
+
         snames: ['Python', 'C', 'C#', 'C++', 'Java', 'HTML', 'CSS', 'JavaScript', 'TypeScript'],
     },
     
     {
         title: 'Libraries & Frameworks',
-        skills: ['logos/react-original.svg', 'logos/tailwindcss-original.svg', 'logos/nextjs-plain.svg', 'logos/node-js.svg', 'logos/trpc-original.svg'],
-        snames: ['React', 'Tailwind CSS', 'Next.js', 'Node.js', 'tRPC'],
+        
+        skills: [
+            'logos/pygame_logo.svg', 'logos/react-original.svg', 'logos/tailwindcss-original.svg', 
+            'logos/nextjs-original.svg', 'logos/node-js.svg', 'logos/vitejs-original.svg', 
+            'logos/trpc-original.svg', 'logos/postgresql-original.svg', 'logos/mongodb.svg', 
+            'logos/gemini_api.svg', 'logos/chrome-extension.svg', 'logos/opencv-original.svg',
+            '/logos/mediapipe.png', 'logos/cheerio.svg',
+        ],
+        
+        snames: [
+            'Pygame', 'React', 'Tailwind CSS', 
+            'Next.js', 'Node.js', 'Vite', 
+            'tRPC', 'PostgreSQL', 'MongoDB', 
+            'Gemini API', 'Chrome Extension API', 
+            'OpenCV', 'Media Pipe', 'Cheerio',
+        ],
     }, 
 
     {
         title: 'Developer Tools',
-        skills: ['logos/github-mark.svg', 'logos/git-plain.svg', 'logos/vscode-original.svg', 'logos/visualstudio-plain.svg', 'logos/pycharm-original.svg', 'logos/eclipse-original.svg', 'logos/unity-original.svg', 'logos/vercel.svg', 'logos/prisma-original.svg', '/logos/drizzle.png'],
-        snames: ['GitHub', 'Git', 'VS Code', 'Visual Studio', 'PyCharm', 'Eclipse', 'Unity', 'Vercel', 'Prisma', 'Drizzle'],
+
+        skills: [
+            'logos/github-mark.svg', 'logos/git-plain.svg', 'logos/vscode-original.svg', 
+            'logos/visualstudio-plain.svg', 'logos/pycharm-original.svg', 'logos/eclipse-original.svg', 
+            'logos/unity-original.svg', 'logos/vercel.svg', 'logos/prisma-original.svg', 
+            '/logos/drizzle.png', 'logos/figma-original.svg',
+        ],
+
+        snames: [
+            'GitHub', 'Git', 'VS Code', 'Visual Studio', 
+            'PyCharm', 'Eclipse', 'Unity', 'Vercel', 
+            'Prisma', 'Drizzle', 'Figma',
+        ],
     }
 ];
 
