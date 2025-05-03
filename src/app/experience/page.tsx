@@ -40,10 +40,9 @@ const cards: card[] = [
         image: '/logos/zuleris_interactive_logo.jpeg',
         body: 
         [
-            '• Designed and developed a cutting-edge training simulation for the U.S. Department of Defense.',
-            '• Utilized Unity to create immersive gameplay that strengthens soldier proficiency in electromagnetic warfare through realistic communication scenarios.', 
-            '• Optimized user experience by refining UI/UX design, incorporating intuitive interface layouts and smooth interaction flows for a more engaging and user-friendly training environment.', 
-            '• Boosted soldiers\' adaptability and operational readiness in electromagnetic warfare situations.'        
+            '• Designed and developed a gamified virtual training environment for electromagnetic warfare to target a 15% increase in trainee success rates, by implementing realistic communications tasks, adversary jamming, and troubleshooting scenarios in Unity.',
+            '• Created modular radio-jamming and signal-interference systems, validated through initial stakeholder demonstrations of realistic adversarial challenges, by modeling multi-band frequency management, modulation techniques, and equipment malfunctions with Unity\'s simulation toolkit.',
+                 
         ]
     },
     {
@@ -76,8 +75,8 @@ const cards: card[] = [
         image: '/logos/mlec.jpg',
         body: 
         [
-            '• Collaborated to create an AI-driven brainstorming platform that gathers data from top hackathon projects in order to generate winning ideas tailored to the user using TypeScript & Next.js.', 
-            '• Developed a sleek & intuitive front-end using Tailwind & React, prioritizing a clean & seamless user experience to boost engagement by 35%.'
+            '• Provided technical support to over 50 teachers & staff members, solving a wide array of IT-related issues to ensure minimal or zero downtime enhancing operational efficiency by 30%.', 
+            '• Managed the installation of hardware & software, system upgrades, & regular maintenance on over 300 devices to ensure flawless performance and integration into the upcoming school year.'
         ],
     },
 
@@ -88,8 +87,9 @@ const cards: card[] = [
         image: '/logos/msms.webp',
         body: 
         [
-            '• Led & managed a team of 6 members, creating project timelines & assignments for each to increase productivity & efficiency by 45%.',
-            '• Placed second in the Technology Student Association, Florida State Video Game Design Competition, 2024, besting over 35 other teams through the creation of enticing & innovative map, enemy, & battle design.'
+            '• Maintained a team of over 15 volunteers to assist with the school\'s yearly summer maintenance & renovations, scheduling & assisting with assignments for each subdivision, increasing productivity from previous years by 70%.',
+            '• Provided intensive technical support to over 50 teachers & staff by troubleshooting & solving a wide array of IT-related problems to ensure minimal or zero downtime enhancing operational efficiency by 30%.',
+            '• Implemented & maintained a digital inventory system for tracking school equipment and resources, reducing misplacements and improving asset management efficiency by 40%. ',
         ],
     },
 ];
