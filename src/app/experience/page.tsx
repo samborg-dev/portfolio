@@ -36,13 +36,12 @@ const cards: card[] = [
     {
         title: 'Software Engineer Intern',
         subtitle: 'Zuleris Interactive',
-        subsubtitle: 'March 2025 - Present',
+        subsubtitle: 'March 2025 - May 2025',
         image: '/logos/zuleris_interactive_logo.jpeg',
         body: 
         [
-            '• Designed and developed a gamified virtual training environment for electromagnetic warfare to target a 15% increase in trainee success rates, by implementing realistic communications tasks, adversary jamming, and troubleshooting scenarios in Unity.',
-            '• Created modular radio-jamming and signal-interference systems, validated through initial stakeholder demonstrations of realistic adversarial challenges, by modeling multi-band frequency management, modulation techniques, and equipment malfunctions with Unity\'s simulation toolkit.',
-                 
+            '• Engineered a Unity based radio interference simulation by authoring modular C# scripts to seed configurable overlap frequencies and schedule randomized jamming via coroutines, delivering a fully adjustable multi-radio training tool.',
+            '• Implemented global static C# events to broadcast UI open/close and frequency changes, synchronizing audio playback and tuning across four independent radio instances for seamless, consistent behavior.',                 
         ]
     },
     {
