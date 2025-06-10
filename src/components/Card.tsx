@@ -26,7 +26,16 @@ export default function Card({ cards }: Cards) {
                             <div key={item.title} className='menu-item w-auto text-[#F5F1ED] bg-[#1B4465] p-10 rounded-3xl transform transition sm:scale-90 hover:scale-100 border-solid border-[#F5F1ED] border-4 shadow-xl shadow-transparent hover:shadow-[#F5F1ED] mb-10'>
                                 <div className='flex flex-col'>
                                     <div className='flex flex-row items-center justify-left pb-5'>
-                                        <div className='pr-5'><Image src={item.image ?? '???'} alt={item.title ?? '???'} title={item.title} width={50} height={50} /></div>
+                                        <div className='pr-5'>
+                                            <Image 
+                                            src={item.image ?? '???'} 
+                                            alt={item.title ?? '???'} 
+                                            title={item.title} 
+                                            width={50} 
+                                            height={50}
+                                            draggable={false}
+                                             />
+                                        </div>
                                         <div className='flex flex-col justify-left'>
                                             <Link href={item.link ?? '/404'} target='_blank' rel="noopener noreferrer">
                                                 <div className='font-bold text-md sm:text-base md:text-lg lg:text-xl xl:text-2xl hover:underline transform transition hover:scale-110'>

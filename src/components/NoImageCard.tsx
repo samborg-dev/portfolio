@@ -53,6 +53,7 @@ export default function NICard({ nicards }: NICards) {
                                                 width={50}
                                                 height={50}
                                                 className="items-center h-12"
+                                                draggable={false}
                                             />
                                         </span>
                                     )) ?? '???'}

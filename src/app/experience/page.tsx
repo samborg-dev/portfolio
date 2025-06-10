@@ -1,5 +1,5 @@
 import LongCard from "@/components/LongCard";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Sam Borges | Experience",
@@ -35,13 +35,13 @@ type card = {
 const cards: card[] = [
     {
         title: 'Software Engineer Intern',
-        subtitle: 'Zuleris Interactive',
-        subsubtitle: 'March 2025 - May 2025',
-        image: '/logos/zuleris_interactive_logo.jpeg',
+        subtitle: 'Data-Enabled Photovoltaics',
+        subsubtitle: 'May 2025 - Present',
+        image: '/logos/dpv.jpg',
         body: 
         [
-            '• Engineered a Unity based radio interference simulation by authoring modular C# scripts to seed configurable overlap frequencies and schedule randomized jamming via coroutines, delivering a fully adjustable multi-radio training tool.',
-            '• Implemented global static C# events to broadcast UI open/close and frequency changes, synchronizing audio playback and tuning across four independent radio instances for seamless, consistent behavior.',                 
+            '• Automated parsing and normalization of heterogeneous instrument metadata by developing an object-oriented Python parser with Pandas and SQLite, reducing manual preprocessing time by over 75%.',
+            '• Achieved consistent metadata provenance and context tracking by defining and validating FAIR data model standards and integrating workflow outputs across pipelines.',                 
         ]
     },
     {
@@ -51,8 +51,19 @@ const cards: card[] = [
         image: '/logos/white-kh-logo.svg',
         body: 
         [
-            '• Collaborated with a team of 8 developers to create tools to support & facilitate the growth of UCF’s largest computer science club of 500+ concurrent yearly members.',
-            '• Assisted in the development of club infrastructure tooling using React & TypeScript to improve member retention by 60%.'
+            '• Improved site accessibility and maintainability by developing reusable React/TypeScript UI components to replace non-semantic SVG elements and embed proper ARIA attributes, enhancing keyboard navigation compliance and cutting UI code duplication.',
+            '• Developed a ground-up email automation system using the Google API to send personalized acceptance, denial, and event-detail communications to applicants for one of Florida’s largest hackathons.'
+        ]
+    },
+    {
+        title: 'Software Engineer Intern',
+        subtitle: 'Zuleris Interactive',
+        subsubtitle: 'March 2025 - May 2025',
+        image: '/logos/zuleris_interactive_logo.jpeg',
+        body: 
+        [
+            '• Developed a modular Unity/C# radio interference simulator with configurable overlap frequencies and coroutine-driven randomized jamming, enabling a fully adjustable multi-radio training tool.',
+            '• Implemented global static C# events to broadcast UI open/close and frequency changes, synchronizing audio playback and tuning across four independent radio instances for seamless, consistent behavior.',                 
         ]
     },
     {

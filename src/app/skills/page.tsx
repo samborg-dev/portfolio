@@ -1,5 +1,5 @@
 import NoImageCard from "@/components/NoImageCard";
-import { Metadata } from "next";
+import { Metadata } from "next/types";
 
 export const metadata: Metadata = {
     title: "Sam Borges | Skills",
@@ -40,29 +40,29 @@ const cards: card[] = [
             'logos/python-original.svg', 'logos/c-plain.svg', 'logos/csharp-plain.svg', 
             'logos/cplusplus-plain.svg', 'logos/java-original-wordmark.svg', 
             'logos/html5-plain.svg', 'logos/css3-plain-wordmark.svg', 
-            'logos/javascript-original.svg', 'logos/typescript-original.svg',
+            'logos/javascript-original.svg', 'logos/typescript-original.svg', 'logos/latex.svg',
         ],
 
-        snames: ['Python', 'C', 'C#', 'C++', 'Java', 'HTML', 'CSS', 'JavaScript', 'TypeScript'],
+        snames: ['Python', 'C', 'C#', 'C++', 'Java', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'LaTeX'],
     },
     
     {
         title: 'Libraries & Frameworks',
         
         skills: [
-            'logos/pygame_logo.svg', 'logos/react-original.svg', 'logos/tailwindcss-original.svg', 
+            'logos/pygame_logo.svg', 'logos/pandas.svg', 'logos/react-original.svg', 'logos/tailwindcss-original.svg', 
             'logos/nextjs-original.svg', 'logos/node-js.svg', 'logos/vitejs-original.svg', 
-            'logos/trpc-original.svg', 'logos/postgresql-original.svg', 'logos/mongodb.svg', 
+            'logos/trpc-original.svg', 'logos/postgresql-original.svg', 'logos/mongodb.svg', 'logos/sqlite-original.svg',
             'logos/gemini_api.svg', 'logos/chrome-extension.svg', 'logos/opencv-original.svg',
-            '/logos/mediapipe.png', 'logos/cheerio.svg',
+            '/logos/mediapipe.png', 'logos/cheerio.svg', 
         ],
         
         snames: [
-            'Pygame', 'React', 'Tailwind CSS', 
+            'Pygame', 'Pandas', 'React', 'Tailwind CSS', 
             'Next.js', 'Node.js', 'Vite', 
-            'tRPC', 'PostgreSQL', 'MongoDB', 
+            'tRPC', 'PostgreSQL', 'MongoDB', 'SQLite',
             'Gemini API', 'Chrome Extension API', 
-            'OpenCV', 'Media Pipe', 'Cheerio',
+            'OpenCV', 'Media Pipe', 'Cheerio', 
         ],
     }, 
 
@@ -71,15 +71,19 @@ const cards: card[] = [
 
         skills: [
             'logos/github-mark.svg', 'logos/git-plain.svg', 'logos/vscode-original.svg', 
-            'logos/visualstudio-plain.svg', 'logos/pycharm-original.svg', 'logos/eclipse-original.svg', 
+            'logos/visualstudio-plain.svg', 'logos/anaconda-original.svg', 'logos/pycharm-original.svg', 
+            'logos/spyder-original.svg', 'logos/eclipse-original.svg', 
             'logos/unity-original.svg', 'logos/vercel.svg', 'logos/prisma-original.svg', 
-            '/logos/drizzle.png', 'logos/figma-original.svg',
+            '/logos/drizzle.png', 'logos/sqlitebrowser.svg', 'logos/figma-original.svg',
+            'logos/overleaf.svg',
         ],
 
         snames: [
             'GitHub', 'Git', 'VS Code', 'Visual Studio', 
+            'Anaconda', 'Spyder',
             'PyCharm', 'Eclipse', 'Unity', 'Vercel', 
-            'Prisma', 'Drizzle', 'Figma',
+            'Prisma', 'Drizzle', 'SQLite Browser', 'Figma',
+            'Overleaf',
         ],
     }
 ];
