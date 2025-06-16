@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Metadata } from "next";
+import { Metadata } from "next/types";
 import Link from "next/link";
 import Image from "next/image";
 import Confetti from "../components/confetti";

@@ -1,5 +1,5 @@
 import LongCard from "@/components/LongCard";
-import { Metadata } from "next";
+import { Metadata } from "next/types";
 
 export const metadata: Metadata = {
     title: "Sam Borges | Experience",

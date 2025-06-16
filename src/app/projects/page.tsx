@@ -1,5 +1,5 @@
 import Card from "@/components/Card";
-import { Metadata } from "next";
+import { Metadata } from "next/types";
 
 export const metadata: Metadata = {
     title: "Sam Borges | Projects",

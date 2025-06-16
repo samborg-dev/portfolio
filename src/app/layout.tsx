@@ -1,6 +1,6 @@
 import "./globals.css";
 import { ThemeProvider, ThemeToggle } from "../components/ui/theme";
-import type { Metadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next/types";
 import { GeistSans } from "geist/font/sans"; 
 import { GeistMono } from "geist/font/mono";
 import Navbar from "../components/ui/navbar";
@@ -36,7 +36,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning className="theme-container">
         <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem>
           <Navbar />
