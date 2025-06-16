@@ -37,7 +37,7 @@ const cards: card[] = [
         title: 'Software Engineer Intern',
         subtitle: 'Data-Enabled Photovoltaics',
         subsubtitle: 'May 2025 - Present',
-        image: '/logos/dpv.jpg',
+        image: '/logos/DPV.png',
         body: 
         [
             '• Automated parsing and normalization of heterogeneous instrument metadata by developing an object-oriented Python parser with Pandas and SQLite, reducing manual preprocessing time by over 75%.',
