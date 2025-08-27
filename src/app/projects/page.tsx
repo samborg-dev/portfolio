@@ -1,5 +1,11 @@
-import Card from "@/components/Card";
 import { Metadata } from "next/types";
+import { Card as UICard, CardContent } from "@/components/ui/card";
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from 'lucide-react';
+import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Sam Borges | Projects",
@@ -45,7 +51,7 @@ const cards: card[] = [
         title: 'Spark-a-Hack',
         subtitle: 'KnightHacks VII 2024',
         image: '/logos/sparkahack.png',
-        body: 'Website that generates user tailored hackathon project ideas based on the user’s intrests, skills, & choice of challenges using generative AI APIs.',
+        body: 'Website that generates user tailored hackathon project ideas based on the user\'s intrests, skills, & choice of challenges using generative AI APIs.',
         skills: ['React', 'Tailwind CSS', 'Next.js', 'TypeScript', 'tRPC', 'Gemini API', 'Git'],
         link: 'https://devpost.com/software/spark-a-hack'
     },
@@ -63,18 +69,73 @@ const cards: card[] = [
 
 export default function Projects() {
     return (
-
-        <div className='flex flex-col min-h-screen items-center justify-center text-[#F5F1ED] bg-[#13293D] pt-40'>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold">
-                Projects
-            </h1>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pt-16">
-                A collection of my work
-            </h2>
-            <div className='pt-16'>
-                <Card cards={cards} />
+        <TooltipProvider>
+            <div suppressHydrationWarning className="theme-container">
+                <div className="min-h-screen flex flex-col justify-center items-center text-center pb-10 px-4 sm:px-14">
+                    <div className="w-full">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-16">
+                            Projects
+                        </h1>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-16">
+                            A collection of my work
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto auto-rows-fr">
+                            {cards.map((project, index) => (
+                                <UICard key={index} className="hover:shadow-lg transition-shadow w-full h-full">
+                                    <CardContent className="p-6 h-full">
+                                        <div className="flex flex-col sm:flex-row items-start gap-6 h-full">
+                                            <div className="flex-shrink-0">
+                                                <Image 
+                                                    src={project.image} 
+                                                    alt={project.title}
+                                                    width={100}
+                                                    height={100}
+                                                    className="object-cover rounded-lg"
+                                                />
+                                            </div>
+                                            <div className="flex-1 min-w-0 flex flex-col h-full">
+                                                <h3 className="text-2xl sm:text-3xl font-bold text-left mb-2">
+                                                    {project.title}
+                                                </h3>
+                                                <p className="text-lg sm:text-xl text-gray-400 text-left mb-3">
+                                                    {project.subtitle}
+                                                </p>
+                                                <p className="text-base sm:text-lg text-left mb-4 leading-relaxed flex-1">
+                                                    {project.body}
+                                                </p>
+                                                <div className="flex flex-wrap gap-2 mb-4">
+                                                    {project.skills.map((skill, skillIndex) => (
+                                                        <Badge key={skillIndex} variant="secondary">
+                                                            {skill}
+                                                        </Badge>
+                                                    ))}
+                                                </div>
+                                                {project.link && (
+                                                    <div className="flex justify-start mt-auto">
+                                                        <Tooltip>
+                                                            <TooltipTrigger asChild>
+                                                                <div className="transform transition hover:scale-110">
+                                                                    <Link href={project.link} target="_blank">
+                                                                        <Button className="px-6 py-2">
+                                                                            <ExternalLink className="w-4 h-4 mr-2" />
+                                                                            View Project
+                                                                        </Button>
+                                                                    </Link>
+                                                                </div>
+                                                            </TooltipTrigger>
+                                                            <TooltipContent>Open {project.title}</TooltipContent>
+                                                        </Tooltip>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </CardContent>
+                                </UICard>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
+        </TooltipProvider>
     );
 }
