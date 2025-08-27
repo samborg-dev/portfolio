@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from 'lucide-react';
 import Link from "next/link";
 import Image from "next/image";
+import SpinFlower from "@/components/flower";
 
 export const metadata: Metadata = {
     title: "Sam Borges | Projects",
@@ -81,7 +82,7 @@ export default function Projects() {
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto auto-rows-fr">
                             {cards.map((project, index) => (
-                                <UICard key={index} className="hover:shadow-lg transition-shadow w-full h-full">
+                                <UICard key={index} className="hover:shadow-lg transition-shadow w-full h-full top">
                                     <CardContent className="p-6 h-full">
                                         <div className="flex flex-col sm:flex-row items-start gap-6 h-full">
                                             <div className="flex-shrink-0">
@@ -132,6 +133,9 @@ export default function Projects() {
                                     </CardContent>
                                 </UICard>
                             ))}
+                        </div>
+                        <div className="relative z-0">
+                            <SpinFlower />
                         </div>
                     </div>
                 </div>

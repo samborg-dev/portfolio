@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from 'lucide-react';
 import Link from "next/link";
 import Image from "next/image";
+import SpinFlower from "@/components/flower";
 
 export const metadata: Metadata = {
     title: "Sam Borges | Experience",
@@ -106,14 +107,14 @@ export default function Experience() {
                 <div className="min-h-screen flex flex-col justify-center items-center text-center pb-10 px-4 sm:px-14">
                     <div className="w-full">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-16">
-                            Projects
+                            Experience
                         </h1>
                         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-16">
-                            A collection of my work
+                            A timeline of my work
                         </h2>
                         <div className="grid gap-8 max-w-6xl mx-auto">
                             {cards.map((exp, index) => (
-                                <UICard key={index} className="hover:shadow-lg transition-shadow">
+                                <UICard key={index} className="hover:shadow-lg transition-shadow top">
                                     <CardContent className="p-6">
                                         <div className="flex flex-col sm:flex-row items-start gap-6">
                                             <div className="flex-shrink-0">
@@ -157,6 +158,9 @@ export default function Experience() {
                                     </CardContent>
                                 </UICard>
                             ))}
+                        </div>
+                        <div className="relative z-0">
+                            <SpinFlower />
                         </div>
                     </div>
                 </div>
