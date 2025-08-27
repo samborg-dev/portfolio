@@ -74,39 +74,38 @@ export default function Projects() {
             <div suppressHydrationWarning className="theme-container">
                 <div className="min-h-screen flex flex-col justify-center items-center text-center pb-10 px-4 sm:px-14">
                     <div className="w-full">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-16">
-                            Projects
-                        </h1>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-16">
-                            A collection of my work
-                        </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto auto-rows-fr">
                             {cards.map((project, index) => (
                                 <UICard key={index} className="hover:shadow-lg transition-shadow w-full h-full top">
                                     <CardContent className="p-6 h-full">
-                                        <div className="flex flex-col sm:flex-row items-start gap-6 h-full">
-                                            <div className="flex-shrink-0">
-                                                <Image 
-                                                    src={project.image} 
-                                                    alt={project.title}
-                                                    width={100}
-                                                    height={100}
-                                                    className="object-cover rounded-lg"
-                                                />
+                                        <div className="flex flex-col h-full">
+                                            <div className="flex flex-row items-center gap-6 mb-6">
+                                                <div className="flex-shrink-0">
+                                                    <Image 
+                                                        src={project.image} 
+                                                        alt={project.title}
+                                                        width={100}
+                                                        height={100}
+                                                        className="object-cover rounded-lg w-14 h-14 sm:w-14 sm:h-14 md:w-14 md:h-14 lg:w-14 lg:h-14 xl:w-16 xl:h-16"
+                                                    />
+                                                </div>
+                                                <div className="flex-1 min-w-0">
+                                                    <span className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-bold text-left block mb-2" style={{ fontFamily: 'Good Matcha' }}>
+                                                        {project.title}
+                                                    </span>
+                                                    <span className="text-sm sm:text-base md:text-base lg:text-base xl:text-lg text-gray-400 text-left block">
+                                                        {project.subtitle}
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <div className="flex-1 min-w-0 flex flex-col h-full">
-                                                <h3 className="text-2xl sm:text-3xl font-bold text-left mb-2">
-                                                    {project.title}
-                                                </h3>
-                                                <p className="text-lg sm:text-xl text-gray-400 text-left mb-3">
-                                                    {project.subtitle}
-                                                </p>
-                                                <p className="text-base sm:text-lg text-left mb-4 leading-relaxed flex-1">
+                                            
+                                            <div className="flex-1 flex flex-col">
+                                                <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-left mb-4 leading-relaxed">
                                                     {project.body}
-                                                </p>
+                                                </span>
                                                 <div className="flex flex-wrap gap-2 mb-4">
                                                     {project.skills.map((skill, skillIndex) => (
-                                                        <Badge key={skillIndex} variant="secondary">
+                                                        <Badge key={skillIndex} variant="default">
                                                             {skill}
                                                         </Badge>
                                                     ))}
