@@ -79,6 +79,13 @@
   src: local('Good Matcha'), url('/Good Matcha.otf') format('woff');
 }
 
+@font-face {
+  font-family: 'Cute Sunrise';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Cute Sunrise'), url('/Cute Sunrise.otf') format('woff');
+}
+
 .top {
   z-index: 2; 
   position: relative; 

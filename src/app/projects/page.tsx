@@ -59,7 +59,7 @@ const cards: card[] = [
 
     {
         title: 'Night of Knights',
-        subtitle: 'May 2023 – May 2024',
+        subtitle: 'May 2023 - May 2024',
         image: '/logos/Night of Knights logo-export.png',
         body: 'Capstone project for my Computer Science magnet strand in my senior year of high school. A 2D action adventure platformer, which achieved 2nd place at the 2024 TSA Florida Regionals Game Design Competition.',
         skills: ['C#', 'Unity'],
@@ -71,7 +71,7 @@ const cards: card[] = [
 export default function Projects() {
     return (
         <TooltipProvider>
-            <div suppressHydrationWarning className="theme-container">
+            <div suppressHydrationWarning className="theme-container" style={{ fontFamily: 'Cute Sunrise' }}>
                 <div className="min-h-screen flex flex-col justify-center items-center text-center pb-10 px-4 sm:px-14">
                     <div className="w-full">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto auto-rows-fr">
@@ -93,20 +93,22 @@ export default function Projects() {
                                                     <span className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-bold text-left block mb-2" style={{ fontFamily: 'Good Matcha' }}>
                                                         {project.title}
                                                     </span>
-                                                    <span className="text-sm sm:text-base md:text-base lg:text-base xl:text-lg text-gray-400 text-left block">
+                                                    <span className="text-sm sm:text-base md:text-base lg:text-base xl:text-lg text-left block text-[#92A6D8]">
                                                         {project.subtitle}
                                                     </span>
                                                 </div>
                                             </div>
                                             
                                             <div className="flex-1 flex flex-col">
-                                                <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-left mb-4 leading-relaxed">
+                                                <span className="text-base sm:text-base md:text-lg lg:text-lg xl:text-lg text-left mb-4 leading-relaxed">
                                                     {project.body}
                                                 </span>
                                                 <div className="flex flex-wrap gap-2 mb-4">
                                                     {project.skills.map((skill, skillIndex) => (
                                                         <Badge key={skillIndex} variant="default">
-                                                            {skill}
+                                                            <span className="text-base sm:text-base md:text-lg lg:text-lg xl:text-base text-[#D7DFF5]">
+                                                                {skill}
+                                                            </span>
                                                         </Badge>
                                                     ))}
                                                 </div>
