@@ -95,7 +95,7 @@ const cards: card[] = [
 export default function Skills() {
     return (
         <TooltipProvider>
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-48 mb-20">
             <div suppressHydrationWarning className="theme-container" style={{ fontFamily: 'Cute Sunrise' }}>
                 <div className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-14">
                     <div className="w-full">
