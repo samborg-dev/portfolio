@@ -128,6 +128,7 @@ export default function Experience() {
                                                         alt={exp.title}
                                                         width={100}
                                                         height={100}
+                                                        draggable={false}
                                                         className="object-cover rounded-lg"
                                                     />
                                                 </div>

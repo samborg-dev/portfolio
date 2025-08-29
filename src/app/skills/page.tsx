@@ -126,7 +126,9 @@ export default function Skills() {
                                                                 </Badge>
                                                             </TooltipTrigger>
                                                             <TooltipContent>
-                                                                <span>{skill.snames?.[index] ?? '???'}</span>
+                                                                <span className="text-lg" style={{ fontFamily: 'Cute Sunrise' }}>
+                                                                    {skill.snames?.[index] ?? '???'}
+                                                                </span>
                                                             </TooltipContent>
                                                         </Tooltip>
                                                     )) ?? '???'}

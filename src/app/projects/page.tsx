@@ -103,6 +103,7 @@ export default function Projects() {
                                                             alt={project.title}
                                                             width={100}
                                                             height={100}
+                                                            draggable={false}
                                                             className="object-cover rounded-lg w-24 h-24 sm:w-18 sm:h-18 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-12 xl:h-12"
                                                         />
                                                     </div>
@@ -142,7 +143,11 @@ export default function Projects() {
                                                                         </Link>
                                                                     </div>
                                                                 </TooltipTrigger>
-                                                                <TooltipContent>Open {project.title}</TooltipContent>
+                                                                <TooltipContent>
+                                                                    <span className="text-base" style={{ fontFamily: 'Cute Sunrise' }}>
+                                                                        Check out {project.title}!
+                                                                    </span>
+                                                                </TooltipContent>
                                                             </Tooltip>
                                                         </div>
                                                     )}

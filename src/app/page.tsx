@@ -47,8 +47,8 @@ export default function SamPage() {
                 <CardTitle className="text-4xl sm:text-5xl font-bold pb-5" style={{ fontFamily: 'Good Matcha' }}>Sam Borges</CardTitle>
                 <CardDescription>
                   <Sound audioUrl="./meow.mp3">
-                    <Badge>
-                      <Image src="/cat.gif" alt=":3" width={50} height={50} unoptimized />
+                    <Badge className="transform transition hover:scale-110">
+                      <Image src="/cat.gif" alt=":3" width={50} height={50} unoptimized draggable={"false"}/>
                     </Badge>
                   </Sound>
                 </CardDescription>
@@ -65,7 +65,11 @@ export default function SamPage() {
                         </Link>
                       </div>
                     </TooltipTrigger>
-                    <TooltipContent>Resume</TooltipContent>
+                    <TooltipContent>
+                      <span className="text-sm" style={{ fontFamily: 'Cute Sunrise' }}>
+                        Resume
+                      </span>
+                    </TooltipContent>
                   </Tooltip>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -77,7 +81,11 @@ export default function SamPage() {
                         </Link>
                       </div>
                     </TooltipTrigger>
-                    <TooltipContent>Github</TooltipContent>
+                    <TooltipContent>
+                      <span className="text-sm" style={{ fontFamily: 'Cute Sunrise' }}>
+                        Github
+                      </span>
+                    </TooltipContent>
                   </Tooltip>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -89,7 +97,11 @@ export default function SamPage() {
                         </Link>
                       </div>
                     </TooltipTrigger>
-                    <TooltipContent>Linkedin</TooltipContent>
+                    <TooltipContent>
+                      <span className="text-sm" style={{ fontFamily: 'Cute Sunrise' }}>
+                        Linkedin
+                      </span>
+                    </TooltipContent>
                   </Tooltip>
                 </div>
               </CardContent>
