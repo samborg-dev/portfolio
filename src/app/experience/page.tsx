@@ -41,50 +41,59 @@ type card = {
 const cards: card[] = [
     {
         title: 'Software Engineer Intern',
-        subtitle: 'Zuleris Interactive',
-        subsubtitle: 'March 2025 - Present',
-        image: '/logos/zuleris_interactive_logo.jpeg',
-        body: 
-        [
-            '• Designed and developed a cutting-edge training simulation for the U.S. Department of Defense.',
-            '• Utilized Unity to create immersive gameplay that strengthens soldier proficiency in electromagnetic warfare through realistic communication scenarios.', 
-            '• Optimized user experience by refining UI/UX design, incorporating intuitive interface layouts and smooth interaction flows for a more engaging and user-friendly training environment.', 
-            '• Boosted soldiers\' adaptability and operational readiness in electromagnetic warfare situations.'        
-        ]
+        subtitle: 'Data-Enabled Photovoltaics',
+        subsubtitle: 'May 2025 - Present',
+        image: '/logos/DPV.png',
+        body:
+            [
+                '• Automated parsing and normalization of heterogeneous instrument metadata by developing an object-oriented Python parser with Pandas and SQLite, reducing manual preprocessing time by over 75%.',
+                '• Achieved consistent metadata provenance and context tracking by defining and validating FAIR data model standards and integrating workflow outputs across pipelines.',
+            ]
     },
     {
         title: 'Software Engineer',
         subtitle: 'Knight Hacks',
         subsubtitle: 'February 2025 - Present',
         image: '/logos/white-kh-logo.svg',
-        body: 
-        [
-            '• Collaborated with a team of 8 developers to create tools to support & facilitate the growth of UCF’s largest computer science club of 500+ concurrent yearly members.',
-            '• Assisted in the development of club infrastructure tooling using React & TypeScript to improve member retention by 60%.'
-        ]
+        body:
+            [
+                '• Improved site accessibility and maintainability by developing reusable React/TypeScript UI components to replace non-semantic SVG elements and embed proper ARIA attributes, enhancing keyboard navigation compliance and cutting UI code duplication.',
+                '• Developed a ground-up email automation system using the Google API to send personalized acceptance, denial, and event-detail communications to applicants for one of Florida’s largest hackathons.'
+            ]
+    },
+    {
+        title: 'Software Engineer Intern',
+        subtitle: 'Zuleris Interactive',
+        subsubtitle: 'March 2025 - May 2025',
+        image: '/logos/zuleris_interactive_logo.jpeg',
+        body:
+            [
+                '• Developed a modular Unity/C# radio interference simulator with configurable overlap frequencies and coroutine-driven randomized jamming, enabling a fully adjustable multi-radio training tool.',
+                '• Implemented global static C# events to broadcast UI open/close and frequency changes, synchronizing audio playback and tuning across four independent radio instances for seamless, consistent behavior.',
+            ]
     },
     {
         title: 'Software Engineer Intern',
         subtitle: 'Miami EdTech',
         subsubtitle: 'June 2023 - August 2023',
         image: '/logos/miamiedtech.png',
-        body: 
-        [
-            '• Assisted with the testing and development of visual recognition AI software in Python, increasing efficiency & accuracy by 25%. ', 
-            '• Researched the possible integrations & benefits of STEM education curriculum packages as part of a team of interns, suggesting a proposal to reach over 30 schools in the surrounding area.'
-        ]
+        body:
+            [
+                '• Assisted with the testing and development of visual recognition AI software in Python, increasing efficiency & accuracy by 25%. ',
+                '• Researched the possible integrations & benefits of STEM education curriculum packages as part of a team of interns, suggesting a proposal to reach over 30 schools in the surrounding area.'
+            ]
     },
 
     {
         title: 'Information Technology Support Assistant',
         subtitle: 'Miami Lakes Educational Center',
-        subsubtitle: 'June 2022 – August 2022',
+        subsubtitle: 'June 2022 - August 2022',
         image: '/logos/mlec.jpg',
-        body: 
-        [
-            '• Collaborated to create an AI-driven brainstorming platform that gathers data from top hackathon projects in order to generate winning ideas tailored to the user using TypeScript & Next.js.', 
-            '• Developed a sleek & intuitive front-end using Tailwind & React, prioritizing a clean & seamless user experience to boost engagement by 35%.'
-        ],
+        body:
+            [
+                '• Provided technical support to over 50 teachers & staff members, solving a wide array of IT-related issues to ensure minimal or zero downtime enhancing operational efficiency by 30%.',
+                '• Managed the installation of hardware & software, system upgrades, & regular maintenance on over 300 devices to ensure flawless performance and integration into the upcoming school year.'
+            ],
     },
 
     {
@@ -92,75 +101,77 @@ const cards: card[] = [
         subtitle: 'Miami Springs Middle School',
         subsubtitle: 'June 2019 - August 2023',
         image: '/logos/msms.webp',
-        body: 
-        [
-            '• Led & managed a team of 6 members, creating project timelines & assignments for each to increase productivity & efficiency by 45%.',
-            '• Placed second in the Technology Student Association, Florida State Video Game Design Competition, 2024, besting over 35 other teams through the creation of enticing & innovative map, enemy, & battle design.'
-        ],
+        body:
+            [
+                '• Maintained a team of over 15 volunteers to assist with the school\'s yearly summer maintenance & renovations, scheduling & assisting with assignments for each subdivision, increasing productivity from previous years by 70%.',
+                '• Provided intensive technical support to over 50 teachers & staff by troubleshooting & solving a wide array of IT-related problems to ensure minimal or zero downtime enhancing operational efficiency by 30%.',
+                '• Implemented & maintained a digital inventory system for tracking school equipment and resources, reducing misplacements and improving asset management efficiency by 40%. ',
+            ],
     },
 ];
 
 export default function Experience() {
     return (
         <TooltipProvider>
-            <div suppressHydrationWarning className="theme-container">
-                <div className="min-h-screen flex flex-col justify-center items-center text-center pb-10 px-4 sm:px-14">
-                    <div className="w-full">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-16">
-                            Experience
-                        </h1>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-16">
-                            A timeline of my work
-                        </h2>
-                        <div className="grid gap-8 max-w-6xl mx-auto">
-                            {cards.map((exp, index) => (
-                                <UICard key={index} className="hover:shadow-lg transition-shadow top">
-                                    <CardContent className="p-6">
-                                        <div className="flex flex-col sm:flex-row items-start gap-6">
-                                            <div className="flex-shrink-0">
-                                                <Image 
-                                                    src={exp.image} 
-                                                    alt={exp.title}
-                                                    width={100}
-                                                    height={100}
-                                                    className="object-cover rounded-lg"
-                                                />
-                                            </div>
-                                            <div className="flex-1 min-w-0">
-                                                <h3 className="text-2xl sm:text-3xl font-bold text-left mb-2">
-                                                    {exp.title}
-                                                </h3>
-                                                <p className="text-lg sm:text-xl text-gray-400 text-left mb-3">
-                                                    {exp.subtitle}
-                                                </p>
-                                                <p className="text-base sm:text-lg text-left mb-4 leading-relaxed">
-                                                    {exp.body}
-                                                </p>
-                                                {exp.link && (
-                                                    <div className="flex justify-start">
-                                                        <Tooltip>
-                                                            <TooltipTrigger asChild>
-                                                                <div className="transform transition hover:scale-110">
-                                                                    <Link href={exp.link} target="_blank">
-                                                                        <Button className="px-6 py-2">
-                                                                            <ExternalLink className="w-4 h-4 mr-2" />
-                                                                            View Project
-                                                                        </Button>
-                                                                    </Link>
-                                                                </div>
-                                                            </TooltipTrigger>
-                                                            <TooltipContent>Open {exp.title}</TooltipContent>
-                                                        </Tooltip>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-48 mb-20">
+                <div suppressHydrationWarning className="theme-container" style={{ fontFamily: 'Cute Sunrise' }}>
+                    <div className="min-h-screen flex flex-col justify-center items-center text-center pb-10 px-4 sm:px-14">
+                        <div className="w-full">
+                            <div className="grid gap-8 max-w-6xl mx-auto">
+                                {cards.map((exp, index) => (
+                                    <UICard key={index} className="hover:shadow-lg transition-shadow top">
+                                        <CardContent className="p-6">
+                                            <div className="flex flex-col sm:flex-row items-start gap-6">
+                                                <div className="flex-shrink-0">
+                                                    <Image
+                                                        src={exp.image}
+                                                        alt={exp.title}
+                                                        width={100}
+                                                        height={100}
+                                                        className="object-cover rounded-lg"
+                                                    />
+                                                </div>
+                                                <div className="flex-1 min-w-0">
+                                                    <div className="flex flex-col">
+                                                        <span className="text-2xl sm:text-3xl font-bold text-left mb-2 block" style={{ fontFamily: 'Good Matcha' }}>
+                                                            {exp.title}
+                                                        </span>
+                                                        <span className="text-lg sm:text-xl absolute text-justify right-6 ">
+                                                            {exp.subsubtitle}
+                                                        </span>
                                                     </div>
-                                                )}
+                                                    <span className="text-lg sm:text-xl text-gray-400 text-left mb-3 block">
+                                                        {exp.subtitle}
+                                                    </span>
+                                                    <span className="text-base sm:text-lg text-left leading-relaxed block">
+                                                        {exp.body}
+                                                    </span>
+                                                    {exp.link && (
+                                                        <div className="flex justify-start">
+                                                            <Tooltip>
+                                                                <TooltipTrigger asChild>
+                                                                    <div className="transform transition hover:scale-110">
+                                                                        <Link href={exp.link} target="_blank">
+                                                                            <Button className="px-6 py-2">
+                                                                                <ExternalLink className="w-4 h-4 mr-2" />
+                                                                                View Project
+                                                                            </Button>
+                                                                        </Link>
+                                                                    </div>
+                                                                </TooltipTrigger>
+                                                                <TooltipContent>Open {exp.title}</TooltipContent>
+                                                            </Tooltip>
+                                                        </div>
+                                                    )}
+                                                </div>
                                             </div>
-                                        </div>
-                                    </CardContent>
-                                </UICard>
-                            ))}
-                        </div>
-                        <div className="relative z-0">
-                            <SpinFlower />
+                                        </CardContent>
+                                    </UICard>
+                                ))}
+                            </div>
+                            <div className="relative z-0">
+                                <SpinFlower />
+                            </div>
                         </div>
                     </div>
                 </div>
