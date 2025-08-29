@@ -1,10 +1,17 @@
-import Card from "@/components/Card";
-import type { Metadata } from "next/types";
+import { Metadata } from "next/types";
+import { Card as UICard, CardContent } from "@/components/ui/card";
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from 'lucide-react';
+import Link from "next/link";
+import Image from "next/image";
+import SpinFlower from "@/components/flower";
 
 export const metadata: Metadata = {
     title: "Sam Borges | Projects",
     description: "Sam Borges is a undergraduate student at the University of Central Florida and an aspiring software engineer.",
-    keywords:[
+    keywords: [
         "Sam Borges",
         "Samuel Borges",
         "Samuel Xavier Borges",
@@ -16,11 +23,11 @@ export const metadata: Metadata = {
         "Full stack",
     ],
     openGraph: {
-      type: "website",
-      title: "Sam Borges",
-      description: "Sam Borges is a undergraduate student at the University of Central Florida and an aspiring software engineer.",
-      },
-  };
+        type: "website",
+        title: "Sam Borges",
+        description: "Sam Borges is a undergraduate student at the University of Central Florida and an aspiring software engineer.",
+    },
+};
 
 type card = {
     title: string;
@@ -38,12 +45,12 @@ const cards: card[] = [
         image: '/logos/tariffix-icon.svg',
         body: 'Chrome extension and educational website that helps users understand the impact of tariffs on product prices using AI-powered estimations and live product metadata analysis.',
         skills: ['React', 'Vite', 'Tailwind CSS', 'Next.js', 'TypeScript', 'MongoDB', 'Chrome Extension API', 'Gemini API', 'Cheerio', 'Git'],
-        link: 'https://devpost.com/software/tariffix'
+        link: 'https://tariffix.vercel.app/'
     },
     {
         title: 'SightSync',
         subtitle: 'HackUSF 2025',
-        image: '/logos/SightSync.jpg',
+        image: '/logos/SightSync.png',
         body: 'System-level accessibility tool that enables hands-free computer control using head movements and voice commands through real-time computer vision and speech recognition.',
         skills: ['Python', 'Pygame', 'Pyautogui', 'OpenCV', 'MediaPipe', 'Git'],
         link: 'https://devpost.com/software/sightsync-iztcrl'
@@ -68,7 +75,7 @@ const cards: card[] = [
 
     {
         title: 'Night of Knights',
-        subtitle: 'May 2023 – May 2024',
+        subtitle: 'May 2023 - May 2024',
         image: '/logos/Night of Knights logo-export.png',
         body: 'Capstone project for my Computer Science magnet strand in my senior year of high school. A 2D action adventure platformer, which achieved 2nd place at the 2024 TSA Florida Regionals Game Design Competition.',
         skills: ['C#', 'Unity'],
@@ -79,18 +86,84 @@ const cards: card[] = [
 
 export default function Projects() {
     return (
+        <TooltipProvider>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-48 mb-20">
+                <div suppressHydrationWarning className="theme-container" style={{ fontFamily: 'Cute Sunrise' }}>
+                    <div className="min-h-screen flex flex-col justify-center items-center text-center pb-10 px-4 sm:px-14">
+                        <div className="w-full">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto md:auto-rows-fr">
+                                {cards.map((project, index) => (
+                                    <UICard key={index} className="hover:shadow-lg transition-shadow w-full h-auto sm:h-full top">
+                                        <CardContent className="p-6 h-auto sm:h-full">
+                                            <div className="flex flex-col h-auto sm:h-full">
+                                                <div className="flex flex-col sm:flex-row items-center gap-6 mb-6">
+                                                    <div className="flex-shrink-0">
+                                                        <Image
+                                                            src={project.image}
+                                                            alt={project.title}
+                                                            width={100}
+                                                            height={100}
+                                                            draggable={false}
+                                                            className="object-cover rounded-lg w-24 h-24 sm:w-18 sm:h-18 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-12 xl:h-12"
+                                                        />
+                                                    </div>
+                                                    <div className="flex-1 min-w-0 text-center sm:text-left">
+                                                        <span className="text-2xl sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-bold block mb-2" style={{ fontFamily: 'Good Matcha' }}>
+                                                            {project.title}
+                                                        </span>
+                                                        <span className="text-lg sm:text-base md:text-base lg:text-base xl:text-lg block text-[#92A6D8]">
+                                                            {project.subtitle}
+                                                        </span>
+                                                    </div>
+                                                </div>
 
-        <div className='flex flex-col min-h-screen items-center justify-center text-[#F5F1ED] bg-[#13293D] pt-40'>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold">
-                Projects
-            </h1>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pt-16">
-                A collection of my work
-            </h2>
-            <div className='pt-16'>
-                <Card cards={cards} />
+                                                <div className="flex-1 flex flex-col">
+                                                    <span className="text-base sm:text-sm md:text-base lg:text-base xl:text-lg text-center sm:text-left mb-4 leading-relaxed">
+                                                        {project.body}
+                                                    </span>
+                                                    <div className="flex flex-wrap gap-2 mb-4 justify-center sm:justify-start">
+                                                        {project.skills.map((skill, skillIndex) => (
+                                                            <Badge key={skillIndex} variant="default">
+                                                                <span className="text-base sm:text-sm md:text-base lg:text-sm xl:text-base text-[#D7DFF5]">
+                                                                    {skill}
+                                                                </span>
+                                                            </Badge>
+                                                        ))}
+                                                    </div>
+                                                    {project.link && (
+                                                        <div className="flex justify-center sm:justify-start mt-auto">
+                                                            <Tooltip>
+                                                                <TooltipTrigger asChild>
+                                                                    <div className="transform transition hover:scale-110">
+                                                                        <Link href={project.link} target="_blank">
+                                                                            <Button className="px-6 py-2 text-sm sm:text-xs md:text-sm lg:text-base xl:text-base">
+                                                                                <ExternalLink className="w-4 h-4 mr-2" />
+                                                                                View Project
+                                                                            </Button>
+                                                                        </Link>
+                                                                    </div>
+                                                                </TooltipTrigger>
+                                                                <TooltipContent>
+                                                                    <span className="text-base" style={{ fontFamily: 'Cute Sunrise' }}>
+                                                                        Check out {project.title}!
+                                                                    </span>
+                                                                </TooltipContent>
+                                                            </Tooltip>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </CardContent>
+                                    </UICard>
+                                ))}
+                            </div>
+                            <div className="relative z-0">
+                                <SpinFlower />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
+        </TooltipProvider>
     );
 }
