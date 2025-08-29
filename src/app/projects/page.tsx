@@ -45,7 +45,7 @@ const cards: card[] = [
         image: '/logos/tariffix-icon.svg',
         body: 'Chrome extension and educational website that helps users understand the impact of tariffs on product prices using AI-powered estimations and live product metadata analysis.',
         skills: ['React', 'Vite', 'Tailwind CSS', 'Next.js', 'TypeScript', 'MongoDB', 'Chrome Extension API', 'Gemini API', 'Cheerio', 'Git'],
-        link: 'https://devpost.com/software/tariffix'
+        link: 'https://tariffix.vercel.app/'
     },
     {
         title: 'SightSync',
