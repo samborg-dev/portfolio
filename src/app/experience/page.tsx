@@ -143,9 +143,13 @@ export default function Experience() {
                                                     <span className="text-lg sm:text-xl text-[#92A6D8] text-center sm:text-left mb-3 block">
                                                         {exp.subtitle}
                                                     </span>
-                                                    <span className="text-base sm:text-lg text-left leading-relaxed block">
-                                                        {exp.body}
-                                                    </span>
+                                                    <div className="text-base sm:text-lg text-left leading-relaxed block space-y-2">
+                                                        {exp.body?.map((bodys, index) => (
+                                                            <div key={index} className="block">
+                                                                <span>{bodys}</span>
+                                                            </div>
+                                                        )) ?? '???'}
+                                                    </div>
                                                     {exp.link && (
                                                         <div className="flex justify-start">
                                                             <Tooltip>
