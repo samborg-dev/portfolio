@@ -121,7 +121,7 @@ export default function Experience() {
                                 {cards.map((exp, index) => (
                                     <UICard key={index} className="hover:shadow-lg transition-shadow top">
                                         <CardContent className="p-6">
-                                            <div className="flex flex-col sm:flex-row items-start gap-6">
+                                            <div className="flex flex-col sm:flex-row items-center gap-6">
                                                 <div className="flex-shrink-0">
                                                     <Image
                                                         src={exp.image}
@@ -132,15 +132,15 @@ export default function Experience() {
                                                     />
                                                 </div>
                                                 <div className="flex-1 min-w-0">
-                                                    <div className="flex flex-col">
-                                                        <span className="text-2xl sm:text-3xl font-bold text-left mb-2 block" style={{ fontFamily: 'Good Matcha' }}>
+                                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-2">
+                                                        <span className="text-2xl sm:text-3xl font-bold text-center sm:text-left flex-1" style={{ fontFamily: 'Good Matcha' }}>
                                                             {exp.title}
                                                         </span>
-                                                        <span className="text-lg sm:text-xl absolute text-justify right-6 ">
+                                                        <span className="text-lg sm:text-xl text-center sm:text-right whitespace-nowrap">
                                                             {exp.subsubtitle}
                                                         </span>
                                                     </div>
-                                                    <span className="text-lg sm:text-xl text-gray-400 text-left mb-3 block">
+                                                    <span className="text-lg sm:text-xl text-[#92A6D8] text-center sm:text-left mb-3 block">
                                                         {exp.subtitle}
                                                     </span>
                                                     <span className="text-base sm:text-lg text-left leading-relaxed block">

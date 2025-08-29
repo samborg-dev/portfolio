@@ -91,51 +91,51 @@ export default function Projects() {
                 <div suppressHydrationWarning className="theme-container" style={{ fontFamily: 'Cute Sunrise' }}>
                     <div className="min-h-screen flex flex-col justify-center items-center text-center pb-10 px-4 sm:px-14">
                         <div className="w-full">
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto auto-rows-fr">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto md:auto-rows-fr">
                                 {cards.map((project, index) => (
-                                    <UICard key={index} className="hover:shadow-lg transition-shadow w-full h-full top">
-                                        <CardContent className="p-6 h-full">
-                                            <div className="flex flex-col h-full">
-                                                <div className="flex flex-row items-center gap-6 mb-6">
+                                    <UICard key={index} className="hover:shadow-lg transition-shadow w-full h-auto sm:h-full top">
+                                        <CardContent className="p-6 h-auto sm:h-full">
+                                            <div className="flex flex-col h-auto sm:h-full">
+                                                <div className="flex flex-col sm:flex-row items-center gap-6 mb-6">
                                                     <div className="flex-shrink-0">
                                                         <Image
                                                             src={project.image}
                                                             alt={project.title}
                                                             width={100}
                                                             height={100}
-                                                            className="object-cover rounded-lg w-14 h-14 sm:w-14 sm:h-14 md:w-14 md:h-14 lg:w-14 lg:h-14 xl:w-16 xl:h-16"
+                                                            className="object-cover rounded-lg w-24 h-24 sm:w-18 sm:h-18 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-12 xl:h-12"
                                                         />
                                                     </div>
-                                                    <div className="flex-1 min-w-0">
-                                                        <span className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-bold text-left block mb-2" style={{ fontFamily: 'Good Matcha' }}>
+                                                    <div className="flex-1 min-w-0 text-center sm:text-left">
+                                                        <span className="text-2xl sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-bold block mb-2" style={{ fontFamily: 'Good Matcha' }}>
                                                             {project.title}
                                                         </span>
-                                                        <span className="text-sm sm:text-base md:text-base lg:text-base xl:text-lg text-left block text-[#92A6D8]">
+                                                        <span className="text-lg sm:text-base md:text-base lg:text-base xl:text-lg block text-[#92A6D8]">
                                                             {project.subtitle}
                                                         </span>
                                                     </div>
                                                 </div>
 
                                                 <div className="flex-1 flex flex-col">
-                                                    <span className="text-base sm:text-base md:text-lg lg:text-lg xl:text-lg text-left mb-4 leading-relaxed">
+                                                    <span className="text-base sm:text-sm md:text-base lg:text-base xl:text-lg text-center sm:text-left mb-4 leading-relaxed">
                                                         {project.body}
                                                     </span>
-                                                    <div className="flex flex-wrap gap-2 mb-4">
+                                                    <div className="flex flex-wrap gap-2 mb-4 justify-center sm:justify-start">
                                                         {project.skills.map((skill, skillIndex) => (
                                                             <Badge key={skillIndex} variant="default">
-                                                                <span className="text-base sm:text-base md:text-lg lg:text-lg xl:text-base text-[#D7DFF5]">
+                                                                <span className="text-base sm:text-sm md:text-base lg:text-sm xl:text-base text-[#D7DFF5]">
                                                                     {skill}
                                                                 </span>
                                                             </Badge>
                                                         ))}
                                                     </div>
                                                     {project.link && (
-                                                        <div className="flex justify-start mt-auto">
+                                                        <div className="flex justify-center sm:justify-start mt-auto">
                                                             <Tooltip>
                                                                 <TooltipTrigger asChild>
                                                                     <div className="transform transition hover:scale-110">
                                                                         <Link href={project.link} target="_blank">
-                                                                            <Button className="px-6 py-2">
+                                                                            <Button className="px-6 py-2 text-sm sm:text-xs md:text-sm lg:text-base xl:text-base">
                                                                                 <ExternalLink className="w-4 h-4 mr-2" />
                                                                                 View Project
                                                                             </Button>
