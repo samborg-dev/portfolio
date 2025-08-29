@@ -121,7 +121,7 @@ export default function Experience() {
                                 {cards.map((exp, index) => (
                                     <UICard key={index} className="hover:shadow-lg transition-shadow top">
                                         <CardContent className="p-6">
-                                            <div className="flex flex-col sm:flex-row items-center gap-6">
+                                            <div className="flex flex-col sm:flex-row items-start gap-6">
                                                 <div className="flex-shrink-0">
                                                     <Image
                                                         src={exp.image}
