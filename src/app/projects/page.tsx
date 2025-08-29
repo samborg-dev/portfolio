@@ -50,7 +50,7 @@ const cards: card[] = [
     {
         title: 'SightSync',
         subtitle: 'HackUSF 2025',
-        image: '/logos/SightSync.jpg',
+        image: '/logos/SightSync.png',
         body: 'System-level accessibility tool that enables hands-free computer control using head movements and voice commands through real-time computer vision and speech recognition.',
         skills: ['Python', 'Pygame', 'Pyautogui', 'OpenCV', 'MediaPipe', 'Git'],
         link: 'https://devpost.com/software/sightsync-iztcrl'
