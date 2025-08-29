@@ -1,5 +1,7 @@
 import { Metadata } from "next/types";
 import { Card as UICard, CardContent } from "@/components/ui/card";
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip";
+import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import SpinFlower from "@/components/flower";
 
@@ -92,7 +94,8 @@ const cards: card[] = [
 
 export default function Skills() {
     return (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-48 mb-20">
+        <TooltipProvider>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-48 mb-20">
             <div suppressHydrationWarning className="theme-container" style={{ fontFamily: 'Cute Sunrise' }}>
                 <div className="min-h-screen flex flex-col justify-center items-center text-center pb-10 px-4 sm:px-14">
                     <div className="w-full">
@@ -107,22 +110,25 @@ export default function Skills() {
                                                         {skill.title}
                                                     </span>
                                                 </div>
-                                                <div className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-9 xl:grid-cols-9 gap-2">
+                                                <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                                                     {skill.skills?.map((skillImage, index) => (
-                                                        <span
-                                                            key={skillImage}
-                                                            className="bg-[#13293D] p-2 rounded-md transform transition sm:scale-90 hover:scale-100 shadow-lg shadow-transparent hover:shadow-[#F5F1ED] flex items-center justify-center"
-                                                        >
-                                                            <Image
-                                                                src={skillImage ?? 'logos/vercel.svg'}
-                                                                alt={skill.snames?.[index] ?? '???'}
-                                                                title={skill.snames?.[index] ?? ''}
-                                                                width={50}
-                                                                height={50}
-                                                                className="items-center h-12"
-                                                                draggable={false}
-                                                            />
-                                                        </span>
+                                                        <Tooltip key={skillImage}>
+                                                            <TooltipTrigger asChild>
+                                                                <Badge variant="default" className="transform transition hover:scale-110 p-2 h-16 w-16 flex items-center justify-center">
+                                                                    <Image
+                                                                        src={skillImage ?? 'logos/vercel.svg'}
+                                                                        alt={skill.snames?.[index] ?? '???'}
+                                                                        width={50}
+                                                                        height={50}
+                                                                        className="rounded-sm object-contain max-h-12 max-w-12"
+                                                                        draggable={false}
+                                                                    />
+                                                                </Badge>
+                                                            </TooltipTrigger>
+                                                            <TooltipContent>
+                                                                <span>{skill.snames?.[index] ?? '???'}</span>
+                                                            </TooltipContent>
+                                                        </Tooltip>
                                                     )) ?? '???'}
                                                 </div>
                                             </div>
@@ -138,5 +144,6 @@ export default function Skills() {
                 </div>
             </div>
         </div>
+        </TooltipProvider>
     );
 }
