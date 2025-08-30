@@ -40,17 +40,6 @@ type card = {
 
 const cards: card[] = [
     {
-        title: 'Software Engineer Intern',
-        subtitle: 'Data-Enabled Photovoltaics',
-        subsubtitle: 'May 2025 - Present',
-        image: '/logos/DPV.png',
-        body:
-            [
-                '• Automated parsing and normalization of heterogeneous instrument metadata by developing an object-oriented Python parser with Pandas and SQLite, reducing manual preprocessing time by over 75%.',
-                '• Achieved consistent metadata provenance and context tracking by defining and validating FAIR data model standards and integrating workflow outputs across pipelines.',
-            ]
-    },
-    {
         title: 'Software Engineer',
         subtitle: 'Knight Hacks',
         subsubtitle: 'February 2025 - Present',
@@ -59,6 +48,17 @@ const cards: card[] = [
             [
                 '• Improved site accessibility and maintainability by developing reusable React/TypeScript UI components to replace non-semantic SVG elements and embed proper ARIA attributes, enhancing keyboard navigation compliance and cutting UI code duplication.',
                 '• Developed a ground-up email automation system using the Google API to send personalized acceptance, denial, and event-detail communications to applicants for one of Florida’s largest hackathons.'
+            ]
+    },
+    {
+        title: 'Software Engineer Intern',
+        subtitle: 'Data-Enabled Photovoltaics',
+        subsubtitle: 'May 2025 - August 2025',
+        image: '/logos/DPV.png',
+        body:
+            [
+                '• Automated parsing and normalization of heterogeneous instrument metadata by developing an object-oriented Python parser with Pandas and SQLite, reducing manual preprocessing time by over 75%.',
+                '• Achieved consistent metadata provenance and context tracking by defining and validating FAIR data model standards and integrating workflow outputs across pipelines.',
             ]
     },
     {
