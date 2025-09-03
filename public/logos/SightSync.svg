@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   version="1.1"
+   viewBox="0 0 500 500"
+   sodipodi:docname="SightSync.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   width="500"
+   height="500"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview19"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.90874053"
+     inkscape:cx="308.66897"
+     inkscape:cy="346.08339"
+     inkscape:window-width="1480"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_1" />
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs
+     id="defs6">
+    <style
+       id="style1">
+      .st0 {
+        fill: #231f20;
+      }
+
+      .st1 {
+        fill: url(#radial-gradient);
+      }
+
+      .st2 {
+        fill: #00aeef;
+      }
+
+      .st3 {
+        fill: #fff;
+      }
+
+      .st4 {
+        fill: #393738;
+      }
+
+      .st5 {
+        font-family: Eurostile-Bol, Eurostile;
+        font-size: 70.2px;
+      }
+    </style>
+    <radialGradient
+       id="radial-gradient"
+       cx="87.800003"
+       cy="250.49001"
+       fx="87.800003"
+       fy="250.49001"
+       r="43.84"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(5.3472605,0,0,5.3472605,-218.75555,-1088.9085)">
+      <stop
+         offset=".53"
+         stop-color="#130c0e"
+         stop-opacity="0"
+         id="stop1" />
+      <stop
+         offset=".56"
+         stop-color="#130c0e"
+         stop-opacity=".2"
+         id="stop2" />
+      <stop
+         offset=".64"
+         stop-color="#130c0e"
+         stop-opacity=".55"
+         id="stop3" />
+      <stop
+         offset=".87"
+         stop-color="#130c0e"
+         stop-opacity=".65"
+         id="stop4" />
+      <stop
+         offset=".88"
+         stop-color="#130c0e"
+         stop-opacity=".7"
+         id="stop5" />
+      <stop
+         offset="1"
+         stop-color="#130c0e"
+         stop-opacity=".95"
+         id="stop6" />
+    </radialGradient>
+  </defs>
+  <ellipse
+     cx="250.73395"
+     cy="250.52678"
+     rx="244.47676"
+     ry="223.94328"
+     id="ellipse11"
+     style="stroke-width:5.34724" />
+  <path
+     class="st4"
+     d="M 227.04555,385.43816 C 149.2429,370.25189 87.214684,316.99319 39.035865,261.43516 c -12.298699,-17.64597 8.87645,-33.42038 20.586951,-45.8795 32.243974,-31.92314 68.391474,-62.02823 109.779254,-82.02697 69.72828,-35.452344 148.22606,-18.98279 207.58067,25.61338 23.26059,15.9883 44.48921,34.11551 64.32758,53.73996 12.4591,12.8869 32.61826,29.30299 22.03072,47.85799 -53.84695,66.62686 -137.31772,133.62805 -234.10311,125.28634"
+     id="path12"
+     style="stroke-width:5.34724" />
+  <path
+     class="st3"
+     d="m 236.8845,325.33491 c -45.55866,-8.39519 -81.86655,-37.96554 -110.10009,-68.76576 -7.2188,-9.7855 5.18684,-18.555 12.03134,-25.45296 18.87582,-17.69943 40.05097,-34.38288 64.27407,-45.45172 40.79959,-19.62444 86.78604,-10.5341 121.54323,14.22372 13.63553,8.87646 26.04117,18.87583 37.64472,29.78423 7.32576,7.16534 19.08972,16.25568 12.88691,26.52242 -31.49536,36.94957 -80.36935,74.11303 -137.05031,69.46091"
+     id="path13"
+     style="stroke-width:5.34724" />
+  <path
+     class="st2"
+     d="m 243.88941,290.79161 c -22.51196,-4.54516 -40.42529,-20.42653 -54.38163,-37.00304 -3.58267,-5.29378 2.56669,-9.9459 5.93544,-13.68899 9.30425,-9.51812 19.78488,-18.50151 31.70927,-24.43697 20.15917,-10.58758 42.88503,-5.6681 60.04974,7.64658 6.73754,4.75907 12.8869,10.1598 18.60846,16.04178 3.58266,3.85003 9.46465,8.71603 6.36324,14.27718 -15.56053,19.89181 -39.67668,39.89058 -67.69633,37.37737"
+     id="path14"
+     style="stroke-width:5.34724" />
+  <path
+     d="M 250.7339,56.848967"
+     id="path15"
+     style="stroke-width:5.34724" />
+  <path
+     class="st0"
+     d="M 250.7339,250.52675"
+     id="path16"
+     style="stroke-width:5.34724" />
+  <path
+     d="M 250.7339,250.52675"
+     id="path17"
+     style="stroke-width:5.34724" />
+  <ellipse
+     class="st1"
+     cx="250.73395"
+     cy="250.52678"
+     rx="244.47676"
+     ry="223.94328"
+     id="ellipse17"
+     style="fill:url(#radial-gradient);stroke-width:5.34724" />
+  <path
+     d="M 250.7339,250.52675"
+     id="path18"
+     style="stroke-width:5.34724" />
+  <path
+     d="M 250.7339,26.58347"
+     id="path19"
+     style="stroke-width:5.34724" />
+</svg>

@@ -50,7 +50,7 @@ const cards: card[] = [
     {
         title: 'SightSync',
         subtitle: 'HackUSF 2025',
-        image: '/logos/SightSync.png',
+        image: '/logos/SightSync.svg',
         body: 'System-level accessibility tool that enables hands-free computer control using head movements and voice commands through real-time computer vision and speech recognition.',
         skills: ['Python', 'Pygame', 'Pyautogui', 'OpenCV', 'MediaPipe', 'Git'],
         link: 'https://devpost.com/software/sightsync-iztcrl'
@@ -58,7 +58,7 @@ const cards: card[] = [
     {
         title: 'Kmodo',
         subtitle: 'January 2025 - Present',
-        image: '/logos/kmodo_logo.jpeg',
+        image: '/logos/kmodo.ico',
         body: 'Hackathon & event management platform that allows users to create, manage, and participate in hackathons and events.',
         skills: ['React', 'Tailwind CSS', 'Next.js', 'TypeScript', 'tRPC', 'Drizzle', 'PostgreSQL', 'Git'],
         link: 'https://kmodo.org/'
