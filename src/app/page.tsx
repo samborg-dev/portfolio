@@ -40,7 +40,7 @@ export default function SamPage() {
   return (
     <TooltipProvider>
       <div suppressHydrationWarning className="theme-container">
-        <div className="min-h-screen flex flex-col justify-center items-center text-center pb-10 px-4 sm:px-14"> 
+        <div className="min-h-screen flex flex-col justify-center items-center text-center pb-10 px-4 sm:px-14 sm:pt-24"> 
           <div className="w-full">
             <Card className="max-w-xl mx-auto top"> 
               <CardHeader>
@@ -57,7 +57,7 @@ export default function SamPage() {
                 <div className="flex flex-row justify-center p-3 sm:p-5 supertop">
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <div className="transform transition hover:scale-110 mx-3 sm:mx-7">
+                      <div className="transform transition hover:scale-110 mx-2 sm:mx-6 md:mx-7">
                         <Link href={resume} target="_blank">
                           <Button className="px-3 sm:px-6">
                             <FileUser className="w-4 h-4 sm:w-6 sm:h-6" />
@@ -73,7 +73,7 @@ export default function SamPage() {
                   </Tooltip>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <div className="transform transition hover:scale-110 mx-3 sm:mx-7">
+                      <div className="transform transition hover:scale-110 mx-2 sm:mx-6 md:mx-7">
                         <Link href={github} target="_blank">
                           <Button className="px-3 sm:px-6">
                             <Github className="w-4 h-4 sm:w-6 sm:h-6" />
@@ -89,7 +89,7 @@ export default function SamPage() {
                   </Tooltip>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <div className="transform transition hover:scale-110 mx-3 sm:mx-7">
+                      <div className="transform transition hover:scale-110 mx-2 sm:mx-6 md:mx-7">
                         <Link href={linkedin} target="_blank">
                           <Button className="px-3 sm:px-6">
                             <Linkedin className="w-4 h-4 sm:w-6 sm:h-6" />

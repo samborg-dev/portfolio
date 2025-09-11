@@ -7,7 +7,7 @@ const SpinFlower = () => {
     return (
         <>
             <div suppressHydrationWarning className="theme-container">
-                <div className="md:hidden flex justify-center mt-6 spinRight">
+                <div className="md:hidden flex justify-center mt-4 sm:mt-6 spinRight">
                     <Flower size={300} />
                 </div>
 

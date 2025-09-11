@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <div suppressHydrationWarning className="theme-container flex justify-center w-auto">
-            <div className='navbar flex justify-center py-4 px-4 items-center h-16 bg-card fixed top-0 max-w-6xl mx-auto z-50 rounded-xl border-solid border-4 border-accent mt-10'>
+            <div className='navbar flex justify-center py-4 px-4 items-center h-16 bg-card fixed top-0 max-w-6xl mx-auto z-50 rounded-xl border-solid border-4 border-accent mt-4 sm:mt-6 md:mt-8 lg:mt-10'>
                 <div className='flex w-auto h-auto bg-transparent'>
                     <ul className='flex flex-row items-center justify-center space-x-2 sm:space-x-4 md:space-x-6 lg:space-x-8'>
                         {link.map(item => {
