@@ -40,9 +40,18 @@ type card = {
 
 const cards: card[] = [
     {
+        title: 'Undergraduate Research Assistant',
+        subtitle: 'Unary Lab - University of Central Florida',
+        subsubtitle: 'May 2026 - Present',
+        image: '/logos/unary.svg',
+        body:
+            [
+            ]
+    },
+    {
         title: 'Software Engineer',
         subtitle: 'Knight Hacks',
-        subsubtitle: 'February 2025 - Present',
+        subsubtitle: 'February 2025 - January 2026',
         image: '/logos/white-kh-logo.svg',
         body:
             [

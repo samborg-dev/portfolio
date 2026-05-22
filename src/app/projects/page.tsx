@@ -7,6 +7,7 @@ import { ExternalLink } from 'lucide-react';
 import Link from "next/link";
 import Image from "next/image";
 import SpinFlower from "@/components/flower";
+import { WinnerBadge } from "@/components/WinnerBadge";
 
 export const metadata: Metadata = {
     title: "Sam Borges | Projects",
@@ -36,16 +37,27 @@ type card = {
     body: string;
     skills: string[];
     link?: string;
+    winner?: string;
 };
 
 const cards: card[] = [
+    {
+        title: 'Ctrl-ARM',
+        subtitle: 'ShellHacks 2025',
+        image: '/logos/ctrlarm.svg',
+        body: 'Muscle-controlled computer accessibility system that translates EMG muscle signals, arm motion, and voice input into real-time OS commands for hands-free interaction.',
+        skills: ['Python', 'Pandas', 'numpy', 'matplotlib', 'tensorflow', 'whisper', 'React', 'Vite', 'Electron', 'Gemini', 'Google A2A', 'Google ADK', 'Scikit Learn', 'XIAO Sense', 'myoware 2.0', 'Git'],
+        link: 'https://devpost.com/software/ctrl-arm',
+        winner: 'Microsoft - AI 4 Good',
+    },
     {
         title: 'Tariffix',
         subtitle: 'Bitcamp 2025',
         image: '/logos/tariffix-icon.svg',
         body: 'Chrome extension and educational website that helps users understand the impact of tariffs on product prices using AI-powered estimations and live product metadata analysis.',
         skills: ['React', 'Vite', 'Tailwind CSS', 'Next.js', 'TypeScript', 'MongoDB', 'Chrome Extension API', 'Gemini API', 'Cheerio', 'Git'],
-        link: 'https://tariffix.vercel.app/'
+        link: 'https://tariffix.vercel.app/',
+        winner: 'MLH -Best Use of MongoDB Atlas',
     },
     {
         title: 'SightSync',
@@ -57,11 +69,12 @@ const cards: card[] = [
     },
     {
         title: 'Kmodo',
-        subtitle: 'January 2025 - Present',
+        subtitle: 'KnightHacks Project Launch 2025',
         image: '/logos/kmodo.ico',
         body: 'Hackathon & event management platform that allows users to create, manage, and participate in hackathons and events.',
         skills: ['React', 'Tailwind CSS', 'Next.js', 'TypeScript', 'tRPC', 'Drizzle', 'PostgreSQL', 'Git'],
-        link: 'https://kmodo.org/'
+        link: 'https://kmodo.org/',
+        winner: '1st Place',
     },
 
     {
@@ -75,11 +88,12 @@ const cards: card[] = [
 
     {
         title: 'Night of Knights',
-        subtitle: 'May 2023 - May 2024',
+        subtitle: 'TSA Florida Regionals 2024',
         image: '/logos/Night of Knights logo-export.png',
         body: 'Capstone project for my Computer Science magnet strand in my senior year of high school. A 2D action adventure platformer, which achieved 2nd place at the 2024 TSA Florida Regionals Game Design Competition.',
         skills: ['C#', 'Unity'],
-        link: 'https://play.unity.com/en/games/27ee33fa-e1e3-4178-8acf-9e1f37546fd0/night-of-knights'
+        link: 'https://play.unity.com/en/games/27ee33fa-e1e3-4178-8acf-9e1f37546fd0/night-of-knights',
+        winner: '2nd Place',
     },
 
 ];
@@ -93,7 +107,10 @@ export default function Projects() {
                         <div className="w-full">
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto md:auto-rows-fr">
                                 {cards.map((project, index) => (
-                                    <UICard key={index} className="hover:shadow-lg transition-shadow w-full h-auto sm:h-full top">
+                                    <UICard key={index} className="relative overflow-visible hover:shadow-lg transition-shadow w-full h-auto sm:h-full top">
+                                        {project.winner && (
+                                            <WinnerBadge label={project.winner} />
+                                        )}
                                         <CardContent className="p-6 h-auto sm:h-full">
                                             <div className="flex flex-col h-auto sm:h-full">
                                                 <div className="flex flex-col sm:flex-row items-center gap-6 mb-6">
