@@ -57,7 +57,7 @@ const cards: card[] = [
         body: 'Chrome extension and educational website that helps users understand the impact of tariffs on product prices using AI-powered estimations and live product metadata analysis.',
         skills: ['React', 'Vite', 'Tailwind CSS', 'Next.js', 'TypeScript', 'MongoDB', 'Chrome Extension API', 'Gemini API', 'Cheerio', 'Git'],
         link: 'https://tariffix.vercel.app/',
-        winner: 'MLH -Best Use of MongoDB Atlas',
+        winner: 'MLH - Best Use of MongoDB Atlas',
     },
     {
         title: 'SightSync',

@@ -46,6 +46,18 @@ const cards: card[] = [
         image: '/logos/unary.svg',
         body:
             [
+                '• Refactoring a Python/PyTorch research codebase that profiles transformer nonlinear activations (softmax, GELU, SiLU) and benchmarks hardware-oriented approximations on Hugging Face models.', 
+                '• Improving experiment reproducibility by modularizing modality-specific inference pipelines, centralizing YAML-driven configuration, and streamlining workflows used to evaluate accuracy on SLURM GPU clusters.'
+            ]
+    },
+    {
+        title: 'Hackathon Organizer',
+        subtitle: 'Knight Hacks',
+        subsubtitle: 'April 2025 - January 2026',
+        image: '/logos/KH2025Small.svg',
+        body:
+            [
+                '• Assisted in the planning and execution of Knight Hacks VIII, a hackathon of 1,000+ attendees and 60+ events.', 
             ]
     },
     {
