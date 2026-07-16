@@ -46,8 +46,8 @@ const cards: card[] = [
         image: '/logos/unary.svg',
         body:
             [
-                '• Refactoring a Python/PyTorch research codebase that profiles transformer nonlinear activations (softmax, GELU, SiLU) and benchmarks hardware-oriented approximations on Hugging Face models.', 
-                '• Improving experiment reproducibility by modularizing modality-specific inference pipelines, centralizing YAML-driven configuration, and streamlining workflows used to evaluate accuracy on SLURM GPU clusters.'
+                '• Rearchitected a Python/PyTorch profiling pipeline for the Mugi LLM accelerator, swapping per model if/else dispatch for a plugin adapter registry that instruments any Hugging Face model without core changes.', 
+                '• Built a one shot profiling API that generates per layer lookup table configs via a pluggable strategy/criterion sizer, emitting workload configs that link profiling to a hardware cost/cycle simulator.'
             ]
     },
     {
