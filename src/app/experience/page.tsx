@@ -46,8 +46,10 @@ const cards: card[] = [
         image: '/logos/unary.svg',
         body:
             [
-                '• Rearchitected a Python/PyTorch profiling pipeline for the Mugi LLM accelerator, swapping per model if/else dispatch for a plugin adapter registry that instruments any Hugging Face model without core changes.', 
-                '• Built a one shot profiling API that generates per layer lookup table configs via a pluggable strategy/criterion sizer, emitting workload configs that link profiling to a hardware cost/cycle simulator.'
+                '• Characterized the Llama-2-7B inference workload for the Mugi LLM accelerator by classifying all 2,500+ per-pass operations into four hardware execution buckets, then generating a validated ONNX graph consumed by the lab’s cost/cycle simulator.',
+                '• Rearchitected the Python/PyTorch profiling pipeline to replace per-model if/else dispatch with a plugin adapter registry, uncovering and fixing a latent binning-format defect that had silently broken instrumentation for every model outside the one hardcoded configuration, unblocking profiling for additional architectures.',
+                '• Designed a one-shot profiling API producing per-layer lookup-table configs and hardware workload specs from a single config object, through a pluggable strategy/criterion sizer validated end-to-end against the simulator on an NCSA Delta HPC cluster, collapsing per-layer hand-editing into one command.',
+                '• Designed an in process evaluation harness that repatches lookup tables in place rather than reloading a 13GB model per layer, converting a 32 round manual search into one unattended job that sweeps a 16-window grid at every layer, seeded per layer from measured exponent histograms.'
             ]
     },
     {
@@ -67,8 +69,9 @@ const cards: card[] = [
         image: '/logos/white-kh-logo.svg',
         body:
             [
-                '• Improved site accessibility and maintainability by developing reusable React/TypeScript UI components to replace non-semantic SVG elements and embed proper ARIA attributes, enhancing keyboard navigation compliance and cutting UI code duplication.',
-                '• Developed a ground-up email automation system using the Google API to send personalized acceptance, denial, and event-detail communications to applicants for one of Florida’s largest hackathons.'
+                '• Drove site accessibility to WCAG 2.1 AA keyboard navigation compliance by building 15 reusable React UI components that replaced non-semantic SVG elements with properly labeled, ARIA attributed alternatives.',
+                '• Engineered an email automation system from scratch, delivering personalized acceptance, denial, and event-detail communications to 1,000+ applicants for one of Florida’s largest hackathons.',
+                '• Built a database backed email queue service and admin console, adding a four tier priority scheduling, batch recipient validation, and date-range blacklisting to replace ad hoc one off send calls across the platform.'
             ]
     },
     {
@@ -78,8 +81,10 @@ const cards: card[] = [
         image: '/logos/DPV.png',
         body:
             [
-                '• Automated parsing and normalization of heterogeneous instrument metadata by developing an object-oriented Python parser with Pandas and SQLite, reducing manual preprocessing time by over 75%.',
-                '• Achieved consistent metadata provenance and context tracking by defining and validating FAIR data model standards and integrating workflow outputs across pipelines.',
+                '• Automated parsing and normalization of heterogeneous metadata across five instrument sources by developing an object-oriented Python parser with Pandas and SQLite, reducing manual preprocessing time by over 75%.',
+                '• Defined and validated FAIR data model standards across 5 pipelines, integrating workflow outputs to preserve metadata provenance through cross pipeline handoffs and make downstream analyses reproducible from raw capture to database record.',
+                '• Unified EXIF and TIFF metadata from electroluminescence camera captures with binary Sinton flash-test records into one normalized SQLite schema, adding per file failure logging that surfaced malformed captures instead of silently dropping them.',
+                '• Documented the parser/outputer/database separation with an extension guide and D2 architecture diagrams, giving non programmer researchers a path to onboard new instrument types without modifying existing pipeline code.',
             ]
     },
     {
