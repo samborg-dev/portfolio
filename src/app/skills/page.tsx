@@ -57,7 +57,7 @@ const cards: card[] = [
         title: 'Libraries & Frameworks',
 
         skills: [
-            '/logos/pytorch-original.svg', '/logos/Nvidia_CUDA_Logo.jpg', '/logos/mujoco.png', '/logos/onnx.svg',
+            '/logos/pytorch-original.svg', '/logos/Nvidia_CUDA_Logo.jpg', '/logos/mujoco.png', '/logos/ONNX.svg',
             '/logos/pandas.svg', '/logos/numpy-original.svg', '/logos/scikitlearn-original.svg',
             '/logos/react-original.svg', '/logos/nextjs-original.svg', '/logos/node-js.svg', '/logos/threejs-original.svg',
             '/logos/trpc-original.svg', '/logos/drizzle.png', '/logos/tailwindcss-original.svg', '/logos/vitejs-original.svg',
