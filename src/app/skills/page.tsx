@@ -41,32 +41,39 @@ const cards: card[] = [
         title: 'Languages',
 
         skills: [
-            'logos/python-original.svg', 'logos/c-plain.svg', 'logos/csharp-plain.svg',
-            'logos/cplusplus-plain.svg', 'logos/java-original-wordmark.svg',
-            'logos/html5-plain.svg', 'logos/css3-plain-wordmark.svg',
-            'logos/javascript-original.svg', 'logos/typescript-original.svg', 'logos/latex.svg',
+            '/logos/python-original.svg', '/logos/c-plain.svg', '/logos/cplusplus-plain.svg', '/logos/csharp-plain.svg',
+            '/logos/java-original-wordmark.svg', '/logos/typescript-original.svg', '/logos/javascript-original.svg',
+            '/logos/html5-plain.svg', '/logos/css3-plain-wordmark.svg', '/logos/latex.svg',
         ],
 
-        snames: ['Python', 'C', 'C#', 'C++', 'Java', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'LaTeX'],
+        snames: [
+            'Python', 'C', 'C++', 'C#',
+            'Java', 'TypeScript', 'JavaScript',
+            'HTML', 'CSS', 'LaTeX',
+        ],
     },
 
     {
         title: 'Libraries & Frameworks',
 
         skills: [
-            'logos/pygame_logo.svg', 'logos/pandas.svg', 'logos/react-original.svg', 'logos/tailwindcss-original.svg',
-            'logos/nextjs-original.svg', 'logos/node-js.svg', 'logos/vitejs-original.svg',
-            'logos/trpc-original.svg', 'logos/postgresql-original.svg', 'logos/mongodb.svg', 'logos/sqlite-original.svg',
-            'logos/gemini_api.svg', 'logos/chrome-extension.svg', 'logos/opencv-original.svg',
-            '/logos/mediapipe.png', 'logos/cheerio.svg',
+            '/logos/pytorch-original.svg', '/logos/Nvidia_CUDA_Logo.jpg', '/logos/mujoco.png', '/logos/onnx.svg',
+            '/logos/pandas.svg', '/logos/numpy-original.svg', '/logos/scikitlearn-original.svg',
+            '/logos/react-original.svg', '/logos/nextjs-original.svg', '/logos/node-js.svg', '/logos/threejs-original.svg',
+            '/logos/trpc-original.svg', '/logos/drizzle.png', '/logos/tailwindcss-original.svg', '/logos/vitejs-original.svg',
+            '/logos/electron-original.svg', '/logos/adk.png', '/logos/gemini_api.svg',
+            '/logos/pygame_logo.svg', '/logos/opencv-original.svg', '/logos/mediapipe.png',
+            '/logos/chrome-extension.svg', '/logos/cheerio.svg',
         ],
 
         snames: [
-            'Pygame', 'Pandas', 'React', 'Tailwind CSS',
-            'Next.js', 'Node.js', 'Vite',
-            'tRPC', 'PostgreSQL', 'MongoDB', 'SQLite',
-            'Gemini API', 'Chrome Extension API',
-            'OpenCV', 'Media Pipe', 'Cheerio',
+            'PyTorch', 'CUDA', 'MuJoCo', 'ONNX',
+            'Pandas', 'NumPy', 'scikit-learn',
+            'React', 'Next.js', 'Node.js', 'Three.js',
+            'tRPC', 'Drizzle', 'Tailwind CSS', 'Vite',
+            'Electron', 'Google ADK', 'Gemini API',
+            'Pygame', 'OpenCV', 'MediaPipe',
+            'Chrome Extension API', 'Cheerio',
         ],
     },
 
@@ -74,19 +81,24 @@ const cards: card[] = [
         title: 'Developer Tools',
 
         skills: [
-            'logos/github-mark.svg', 'logos/git-plain.svg', 'logos/vscode-original.svg',
-            'logos/visualstudio-plain.svg', 'logos/anaconda-original.svg', 'logos/pycharm-original.svg',
-            'logos/spyder-original.svg', 'logos/eclipse-original.svg',
-            'logos/unity-original.svg', 'logos/vercel.svg', 'logos/prisma-original.svg',
-            '/logos/drizzle.png', 'logos/sqlitebrowser.svg', 'logos/figma-original.svg',
-            'logos/overleaf.svg',
+            '/logos/git-plain.svg', '/logos/linux-original.svg', '/logos/docker-mark-ocean-blue.svg',
+            '/logos/postgresql-original.svg', '/logos/sqlite-original.svg', '/logos/mongodb.svg',
+            '/logos/turborepo.svg', '/logos/pnpm-original.svg', '/logos/vercel.svg',
+            '/logos/unity-original.svg', '/logos/figma-original.svg', '/logos/d2_graphic.svg',
+            '/logos/github-mark.svg', '/logos/vscode-original.svg', '/logos/visualstudio-plain.svg',
+            '/logos/anaconda-original.svg', '/logos/pycharm-original.svg', '/logos/spyder-original.svg',
+            '/logos/eclipse-original.svg', '/logos/prisma-original.svg', '/logos/sqlitebrowser.svg',
+            '/logos/overleaf.svg',
         ],
 
         snames: [
-            'GitHub', 'Git', 'VS Code', 'Visual Studio',
-            'Anaconda', 'Spyder',
-            'PyCharm', 'Eclipse', 'Unity', 'Vercel',
-            'Prisma', 'Drizzle', 'SQLite Browser', 'Figma',
+            'Git', 'Linux', 'Docker',
+            'PostgreSQL', 'SQLite', 'MongoDB',
+            'Turborepo', 'pnpm', 'Vercel',
+            'Unity', 'Figma', 'D2',
+            'GitHub', 'VS Code', 'Visual Studio',
+            'Anaconda', 'PyCharm', 'Spyder',
+            'Eclipse', 'Prisma', 'SQLite Browser',
             'Overleaf',
         ],
     }
@@ -95,9 +107,9 @@ const cards: card[] = [
 export default function Skills() {
     return (
         <TooltipProvider>
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div suppressHydrationWarning className="theme-container" style={{ fontFamily: 'Cute Sunrise' }}>
-                <div className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-14">
+                <div className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-14 pt-32 pb-28">
                     <div className="w-full">
                         <div className="grid gap-8 max-w-6xl mx-auto">
                             {cards.map((skill, index) => (
@@ -116,7 +128,7 @@ export default function Skills() {
                                                             <TooltipTrigger asChild>
                                                                 <Badge variant="default" className="transform transition hover:scale-110 p-2 h-16 w-16 flex items-center justify-center">
                                                                     <Image
-                                                                        src={skillImage ?? 'logos/vercel.svg'}
+                                                                        src={skillImage ?? '/logos/vercel.svg'}
                                                                         alt={skill.snames?.[index] ?? '???'}
                                                                         width={50}
                                                                         height={50}

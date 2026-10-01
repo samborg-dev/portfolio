@@ -34,6 +34,7 @@ type card = {
     title: string;
     subtitle: string;
     image: string;
+    imageContain?: boolean;
     body: string;
     skills: string[];
     link?: string;
@@ -42,9 +43,18 @@ type card = {
 
 const cards: card[] = [
     {
+        title: 'This Fly Plays Drums',
+        subtitle: 'ShellHacks 2026',
+        image: '/logos/thisflyplaysdrums.png',
+        body: 'Simulated fruit fly connectome that learns to drum. A human teaches it on a drum kit, then the fly plays by driving its legs to strike a physics simulated drum kit.',
+        skills: ['Python', 'PyTorch', 'MuJoCo', 'MaleCNS', 'NumPy', 'Pandas', 'CUDA', 'Docker', 'Three.js', 'Git'],
+        link: 'https://devpost.com/software/thisflyplaysdrums',
+    },
+    {
         title: 'Ctrl-ARM',
         subtitle: 'ShellHacks 2025',
         image: '/logos/ctrlarm.svg',
+        imageContain: true,
         body: 'Muscle-controlled computer accessibility system that translates EMG muscle signals, arm motion, and voice input into real-time OS commands for hands-free interaction.',
         skills: ['Python', 'Pandas', 'numpy', 'matplotlib', 'tensorflow', 'whisper', 'React', 'Vite', 'Electron', 'Gemini', 'Google A2A', 'Google ADK', 'Scikit Learn', 'XIAO Sense', 'myoware 2.0', 'Git'],
         link: 'https://devpost.com/software/ctrl-arm',
@@ -121,7 +131,7 @@ export default function Projects() {
                                                             width={100}
                                                             height={100}
                                                             draggable={false}
-                                                            className="object-cover rounded-lg w-24 h-24 sm:w-18 sm:h-18 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-12 xl:h-12"
+                                                            className={`${project.imageContain ? 'object-contain' : 'object-cover'} rounded-lg w-24 h-24 sm:w-18 sm:h-18 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-12 xl:h-12`}
                                                         />
                                                     </div>
                                                     <div className="flex-1 min-w-0 text-center sm:text-left">
